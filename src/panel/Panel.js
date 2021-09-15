@@ -18,63 +18,67 @@ export default class Panel extends Component {
     return (
       <div>
         <BrowserRouter>
-        <Layout>
-          <Header
-            className="site-layout-sub-header-background header"
-            style={{ padding: 0 }}
-          >
-            <div className="imgh1">
-              <Link to='/'>
-              <img src={foto} className="foto" /></Link>
-              <h1 className="text">
-                O'zbekiston Respublikasi Sog'liqni saqlash vazirligi
-              </h1>
-            </div>
-          </Header>
-
           <Layout>
-            <Sider
-              breakpoint="lg"
-              collapsedWidth="0"
-              onBreakpoint={(broken) => {
-                console.log(broken);
-              }}
-              onCollapse={(collapsed, type) => {
-                console.log(collapsed, type);
-              }}
+            <Header
+              className="site-layout-sub-header-background header"
+              style={{ padding: 0 }}
             >
-              <Menu
-                theme="dark"
-                mode="inline"
-                className="menu"
-                defaultSelectedKeys={["4"]}
-              >
-                <Menu.Item key="1" icon={<HomeOutlined />}>
-                  <Link  style={{textDecoration:'none'}} to="/bosh">Bosh sahifa</Link>
-                </Menu.Item>
-                <Menu.Item key="2" icon={<PlusOutlined />}>
-                  <Link  style={{textDecoration:'none'}} to="/dorilar">Dorilar</Link>
-                </Menu.Item>
-                <Menu.Item key="3" icon={<EnvironmentOutlined />}>
-                  <Link  style={{textDecoration:'none'}} to="/apteka">Aptekalar</Link>
-                </Menu.Item>
-              </Menu>
-            </Sider>
-            <Layout style={{ padding: "24px 24px" }}>
-              <Content
-                className="site-layout-background"
-                style={{
-                  padding: 24,
-                  margin: 0,
-                  minHeight: 280,
+              <div className="imgh1">
+                <Link to="/">
+                  <img src={foto} className="foto" />
+                </Link>
+                <h1 className="text">
+                  O'zbekiston Respublikasi Sog'liqni saqlash vazirligi
+                </h1>
+              </div>
+            </Header>
+
+            <Layout>
+              <Sider
+                breakpoint="lg"
+                collapsedWidth="0"
+                onBreakpoint={(broken) => {
+                  console.log(broken);
+                }}
+                onCollapse={(collapsed, type) => {
+                  console.log(collapsed, type);
                 }}
               >
-                {" "}
-                
+                <Menu
+                  theme="dark"
+                  mode="inline"
+                  className="menu"
+                  defaultSelectedKeys={["4"]}
+                >
+                  <Menu.Item key="1" icon={<HomeOutlined />}>
+                    <Link style={{ textDecoration: "none" }} to="/bosh">
+                      Bosh sahifa
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="2" icon={<PlusOutlined />}>
+                    <Link style={{ textDecoration: "none" }} to="/dorilar">
+                      Dorilar
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="3" icon={<EnvironmentOutlined />}>
+                    <Link style={{ textDecoration: "none" }} to="/apteka">
+                      Aptekalar
+                    </Link>
+                  </Menu.Item>
+                </Menu>
+              </Sider>
+              <Layout style={{ padding: "24px 24px" }}>
+                <Content
+                  className="site-layout-background"
+                  style={{
+                    padding: 24,
+                    margin: 0,
+                    minHeight: 280,
+                  }}
+                >
+                  {" "}
                   <Switch>
-                    <Route exact path='/'>
-
-                    </Route>
+                    <Route exact path="/"></Route>
                     <Route exact path="/bosh">
                       <Bosh />
                     </Route>
@@ -85,11 +89,10 @@ export default class Panel extends Component {
                       <Apteka />
                     </Route>{" "}
                   </Switch>
-               
-              </Content>
+                </Content>
+              </Layout>
             </Layout>
           </Layout>
-        </Layout>
         </BrowserRouter>
       </div>
     );
