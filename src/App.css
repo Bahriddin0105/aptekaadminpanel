@@ -1,0 +1,127 @@
+#root{
+  height:100%;
+}
+
+
+.imgh1{
+  display:flex;
+  width: 100%;
+
+}
+.text {
+font-size: 30px;
+color:white;
+margin:auto;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  
+}
+.logotext{
+  padding: 2px;
+  box-sizing: border-box;
+  color: #fff;
+  line-height: 0.8;
+  display: none;
+}
+
+.site-layout-sub-header-background {
+display: flex;
+  /* background: green; */
+  /* z-index: 2; */
+}
+
+.site-layout-background {
+  background: #fff;
+}
+.plus{
+  margin-left: 40%;
+margin-top: 40%;
+
+  transform: scale(10, 10);
+  transition: 0.3s;
+}
+
+.plus:hover{
+  transform: scale(12, 12);
+}
+.foto{
+  width: 50px;
+  height:50px;
+  margin:10px;
+}
+.deleteicon:hover{
+  color:red;
+}
+.cards img{
+  transition: 0.6s;
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+}
+.cards{
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.cards:hover img{
+  transform: scale(1.1, 1.1);
+}
+
+.btn{
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+}
+.iconbtn{
+  transition: 0.2s;
+}
+.colorred:hover{
+color: red;
+}
+.iconbtn:hover{
+  transform: scale(1.2, 1.2);
+}
+@media only screen and (max-width : 800px){
+  
+  .text{
+    font-size: 25px;
+  }
+  .imgh1 .foto{
+    width: 40px;
+  height:40px;
+  margin:20px;
+  }
+ }
+@media only screen and (max-width : 650px){
+  .imgh1 .foto{
+   width: 40px;
+   height:40px;
+   margin-bottom:20px;
+ }
+ .text{
+   font-size: 15px;
+ }
+}
+@media only screen and (max-width : 232px){
+ .imgh1 .foto{
+    width: 35px;
+    height:35px;
+    margin-bottom:30px
+  }
+  .text{
+    font-size: 10px;
+  }
+ }.header{
+   position: sticky;
+   top: 0px;
+   z-index: 3;
+ }
+ .menu{
+   position: sticky;
+   top: 66px;
+ }
+ 
