@@ -11,10 +11,10 @@ export default class App extends Component {
       <div>
          <BrowserRouter>
             <Route exact path="/">
-            <Panel/>
-          </Route>
-          <Route exact path="/admin">
             <Login/>
+          </Route>
+          <Route exact path="/adminpanel">
+            <Panel/>
           </Route>
           
              </BrowserRouter> 
