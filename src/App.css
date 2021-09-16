@@ -38,15 +38,14 @@ display: flex;
   background: #fff;
 }
 .plus{
-  margin-left: 40%;
-margin-top: 40%;
-
-  transform: scale(10, 10);
+  position: fixed;
+  bottom: 50px;
+  right: 60px;
+  transform: scale(3, 3);
   transition: 0.3s;
 }
-
 .plus:hover{
-  transform: scale(12, 12);
+  transform: scale(4, 4);
 }
 .foto{
   width: 50px;

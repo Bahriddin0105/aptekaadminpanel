@@ -24,7 +24,7 @@ export default class Panel extends Component {
               style={{ padding: 0 }}
             >
               <div className="imgh1">
-                <Link to="/">
+                <Link to="/adminpanel">
                   <img src={foto} className="foto" />
                 </Link>
                 <h1 className="text">
@@ -51,20 +51,16 @@ export default class Panel extends Component {
                   defaultSelectedKeys={["4"]}
                 >
                   <Menu.Item key="1" icon={<HomeOutlined />}>
-                    <Link style={{ textDecoration: "none" }} to="/bosh">
+                    <Link style={{ textDecoration: "none" }} to="/adminpanel/bosh">
                       Bosh sahifa
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="2" icon={<PlusOutlined />}>
-                    <Link style={{ textDecoration: "none" }} to="/dorilar">
+                    <Link style={{ textDecoration: "none" }} to="/adminpanel/dorilar">
                       Dorilar
                     </Link>
                   </Menu.Item>
-                  <Menu.Item key="3" icon={<EnvironmentOutlined />}>
-                    <Link style={{ textDecoration: "none" }} to="/apteka">
-                      Aptekalar
-                    </Link>
-                  </Menu.Item>
+
                 </Menu>
               </Sider>
               <Layout style={{ padding: "24px 24px" }}>
@@ -76,18 +72,16 @@ export default class Panel extends Component {
                     minHeight: 280,
                   }}
                 >
-                  {" "}
+
                   <Switch>
-                    <Route exact path="/"></Route>
-                    <Route exact path="/bosh">
+                    <Route exact path="/adminpanel"></Route>
+                    <Route exact path="/adminpanel/bosh">
                       <Bosh />
                     </Route>
-                    <Route exact path="/dorilar">
+                    <Route exact path="/adminpanel/dorilar">
                       <Card1 />
                     </Route>
-                    <Route exact path="/apteka">
-                      <Apteka />
-                    </Route>{" "}
+
                   </Switch>
                 </Content>
               </Layout>

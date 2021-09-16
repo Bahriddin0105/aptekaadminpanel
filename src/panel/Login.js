@@ -27,7 +27,7 @@ export default class RouterA extends Component {
 
                   
                 </Form>
-                <Link to='/adminpanel'><Button variant="primary" style={{width: '100%', marginTop: '20px'}}>KIRISH</Button></Link>
+                <Link to='/adminpanel/bosh'><Button variant="primary" style={{width: '100%', marginTop: '20px'}}>KIRISH</Button></Link>
               </Container>
             </Col>
             <Col xs={6}>
