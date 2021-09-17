@@ -26,3 +26,19 @@
 .inp{
     border: 0px solid transparent;
 }
+
+
+
+
+
+
+
+
+
+
+.btn{
+    transition: 0.4s;
+}
+.btn :hover{
+    width: 40px;
+}
