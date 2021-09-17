@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { Row, Col, Alert, Container , Form ,Button } from "react-bootstrap";
 import {Link} from 'react-router-dom'
-import fox from "./fox.jpg";
-import "../Login.css";
+import fox from "../doctor2.jpg";
+import "./Login.css";
 export default class RouterA extends Component {
   render() {
     return (
-      <div className="bosh">
+      <div className="bosh"> 
         <div className="asosiy">
           <Row>
-            <Col xs={6} style={{ padding: "20px", boxSizing: "borderBox", marginTop: '8%' }}>
+            <Col xs={6} style={{ padding: "20px", boxSizing: "borderBox", marginTop: '6%' }}>
               <Container>
                 <Container>
                 {" "}
@@ -19,17 +19,17 @@ export default class RouterA extends Component {
                 
                 
                 
-                <Alert variant={"secondary"} style={{ textAlign: "center", borderRadius:'15px' }}>
-                  Login va parolni kiriting
+                <Alert variant={"secondary"} style={{ textAlign: "center", borderRadius:'15px', fontSize: '20px' }}>
+                 <img className='logotip' src='https://www.logopik.com/wp-content/uploads/edd/2018/09/Medical-Logo-Vector-Free-Download.png'/> Login va parolni kiriting
                 </Alert><br/>
                 <Form>
                   <Form.Group className="mb-3" controlId="formBasicLogin">
-                    <Form.Label>Login</Form.Label>
-                    <Form.Control className='inp' style={{borderRadius:'15px'}} type="word" placeholder="Enter login" />
+                    <Form.Label style={{fontFamily:'Century Gothic', fontSize:'22px', fontWeight:'600'}}>Login</Form.Label>
+                    <Form.Control className='inp' style={{backgroundColor:'rgba(128, 128, 128, 0.089)', color:'rgba(0, 0, 255, 0.603)', fontSize:'18px', fontFamily:'Century Gothic', border:'0px solid red', borderLeft:'5px solid blue', borderRadius:'0px'}} type="word" placeholder="Enter login" />
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Parol</Form.Label>
-                    <Form.Control className='inp' style={{borderRadius:'15px'}} type="password" placeholder="Enter password" />
+                    <Form.Label style={{fontFamily:'Century Gothic', fontSize:'22px', fontWeight:'600'}}>Parol</Form.Label>
+                    <Form.Control className='inp' style={{backgroundColor:'rgba(128, 128, 128, 0.089)', color:'rgba(0, 0, 255, 0.603)', fontSize:'18px', fontFamily:'Century Gothic', border:'0px solid red', borderLeft:'5px solid blue', borderRadius:'0px'}} type="password" placeholder="Enter password" />
                   </Form.Group>
 
                   
@@ -42,7 +42,7 @@ export default class RouterA extends Component {
 
 
 
-                <Link to='/adminpanel/bosh'><Button variant="primary" className='btn' style={{width: '100%', marginTop: '20px', borderRadius:'15px'}}>KIRISH</Button></Link>
+                <Link to='/adminpanel/bosh'><div className='btna'>KIRISH</div></Link>
 
 
 

@@ -13,7 +13,7 @@
     left: 17%;
     width: 900px;
     height: 500px;
-    background-color: white;
+    background-color: rgba(128, 128, 128, 0.411);
     border-radius: 20px;
     box-shadow: 0px 0px 5px grey;
 }
@@ -22,4 +22,31 @@
     margin-left: -5%;
     height: 500px;
     border-radius: 0px 20px 20px 0px;
+}
+.int{
+    outline: none;
+    background-color: rgba(128, 128, 128, 0.699);
+}
+.logotip{
+    display: inline;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+.btna{
+    background-color: rgba(0, 0, 255, 0.808);
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.4s;
+    color: white;
+    text-decoration: none;
+}
+.btna:hover{
+    transform: scale(1.2, 1.2);
 }
