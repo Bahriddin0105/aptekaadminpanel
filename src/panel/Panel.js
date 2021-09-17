@@ -3,7 +3,7 @@ import { Layout, Menu, Card } from "antd";
 import foto from "../doctor logo.png";
 import Bosh from "./Bosh";
 import Apteka from "./Apteka";
-import Card1 from "./Card1.js";
+import Dorilar from "./Dorilar.js";
 import {
   HomeOutlined,
   PlusOutlined,
@@ -18,7 +18,7 @@ export default class Panel extends Component {
     return (
       <div>
         <BrowserRouter>
-          <Layout>
+          <Layout style={{ height: "100vh" }}>
             <Header
               className="site-layout-sub-header-background header"
               style={{ padding: 0 }}
@@ -51,16 +51,21 @@ export default class Panel extends Component {
                   defaultSelectedKeys={["4"]}
                 >
                   <Menu.Item key="1" icon={<HomeOutlined />}>
-                    <Link style={{ textDecoration: "none" }} to="/adminpanel/bosh">
+                    <Link
+                      style={{ textDecoration: "none" }}
+                      to="/adminpanel/bosh"
+                    >
                       Bosh sahifa
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="2" icon={<PlusOutlined />}>
-                    <Link style={{ textDecoration: "none" }} to="/adminpanel/dorilar">
+                    <Link
+                      style={{ textDecoration: "none" }}
+                      to="/adminpanel/dorilar"
+                    >
                       Dorilar
                     </Link>
                   </Menu.Item>
-
                 </Menu>
               </Sider>
               <Layout style={{ padding: "24px 24px" }}>
@@ -72,16 +77,14 @@ export default class Panel extends Component {
                     minHeight: 280,
                   }}
                 >
-
                   <Switch>
                     <Route exact path="/adminpanel"></Route>
                     <Route exact path="/adminpanel/bosh">
                       <Bosh />
                     </Route>
                     <Route exact path="/adminpanel/dorilar">
-                      <Card1 />
+                      <Dorilar />
                     </Route>
-
                   </Switch>
                 </Content>
               </Layout>
