@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Modal, Button } from "antd";
 import { Form } from "react-bootstrap";
 import "./Login.css";
-export default class Apteka extends Component {
+export default class Dorilar extends Component {
   state = {
     loading: false,
     visible: false,
