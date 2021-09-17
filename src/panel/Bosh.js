@@ -1,187 +1,106 @@
 import React, { Component } from "react";
-import { Card } from "antd";
-import { Row, Col, Button, Modal, Form } from "react-bootstrap";
-import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import { PlusCircleOutlined } from "@ant-design/icons";
+import { Modal, Button } from "antd";
+import { Form } from "react-bootstrap";
+import "./Login.css";
 export default class Bosh extends Component {
   state = {
-    
-    malumot:[],
-    isVisibleModal: false,
-    manzil: null,
-    telnomeri: null,
-    email: null,
-    edit: null,
-    show: false,
-  };
-  openModal = () => {
-    this.setState({ isVisibleModal: true });
-  };
-  handleClose = () => {
-    document.getElementById("formBasicmanzil").value = "";
-    document.getElementById("formBasicemail").value = "";
-    document.getElementById("formBasictelnomeri").value = "";
-    this.setState({ isVisibleModal: false });
+    loading: false,
+    visible: false,
   };
 
-  deleteDori = (id) => {
-    var malumot = this.state.malumot;
-    malumot.splice(id, 1);
-    console.log(id);
+  showModal = () => {
     this.setState({
-      malumot: malumot,
+      visible: true,
     });
   };
-  editDori = (id) => {
-    var malumot = this.state.malumot;
-    var malumot = {
-      manzil: this.state.manzil,
-      telnomeri: this.state.telnomeri,
-      email: this.state.email,
-    };
 
-    this.setState({
-      yangi: malumot,
-      edit: id,
-    });
-
-    this.openModal();
-  };
-  saveDori = () => {
-    var manzil = document.getElementById("formBasicmanzil").value;
-    var email = document.getElementById("formBasicemail").value;
-    var telnomeri = document.getElementById("formBasictelnomeri").value;
-    // var rasm = document.getElementById("formFile").value;
-    
-    var yangi = {
-      id: this.state.malumot.length + 1,
-      manzil: manzil,
-      telnomeri: telnomeri,
-      email: email,
-    };
-    var malumot = this.state.malumot;
-
-    if (this.state.edit == null) {
-      malumot.push(yangi);
-    } else {
-      malumot[this.state.edit] = yangi;
-      this.setState({
-        yangi: [],
-        edit: null,
-      });
-    }
-
-    this.setState({
-      malumot: malumot,
-    });
-    this.handleClose();
+  handleOk = () => {
+    this.setState({ loading: true });
+    setTimeout(() => {
+      this.setState({ loading: false, visible: false });
+    }, 3000);
   };
 
+  handleCancel = () => {
+    this.setState({ visible: false });
+  };
   render() {
-    const { isVisibleModal, malumot } = this.state;
-    const { Meta } = Card;
+    const { visible, loading } = this.state;
     return (
       <div>
-        <Row>
-          
-          <br />
-          <br />
-          <br />
-          <br />
-          <Modal
-            show={isVisibleModal}
-            className="xxx"
-            onHide={this.handleClose}
-          >
-            <Modal.Header>
-              <Modal.Title>Malumotlaringizni to'ldiring</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <Form>
-                <Form.Group className="mb-3" controlId="formBasicmanzil">
-                  <Form.Label>Manzil</Form.Label>
-                  <Form.Control
-                    type="text"
-                    value={this.state.malumot["manzil"]}
-                    onChange={(e) => this.setState({ manzil: e.target.value })}
-                    placeholder="Manzil"
-                  />
-                </Form.Group>
-                {/* <Form.Group controlId="formFile" className="mb-3">
-                  <Form.Label>Telefon Nomer</Form.Label>
-                  <br />
-                  <Form.Control type="tel" placeholder="Phono number" />
-                </Form.Group> */}
-                <Form.Group className="mb-3" controlId="formBasictelnomeri">
-                  <Form.Label>Telefon Nomer</Form.Label>
-                  <Form.Control
-                    type="tel"
-                    value={this.state.malumot["telnomeri"]}
-                    onChange={(e) => this.setState({ telnomeri: e.target.value })}
-                    placeholder="Phone number"
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicemail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control
-                    type="email"
-                    value={this.state.malumot["email"]}
-                    onChange={(e) => this.setState({ email: e.target.value })}
-                    placeholder="Emailni tiriting"
-                  />
-                </Form.Group>
-              </Form>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={this.handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={this.saveDori}>
-                Save Changes
-              </Button>
-            </Modal.Footer>
-          </Modal>
-          {malumot && Array.isArray(malumot)
-            ? malumot.map((item, key) => {
-                return (
-                  <Col  xs={4}>
-                    <Card
-                      style={{
-                        width: 300,
-                        margin: "auto",
-                        marginBottom: "20px",
-                      }}
-                      cover={<img alt="example" src={item.rasm} />}
-                      className="cards"
-                      actions={[
-                        <EditOutlined
-                          onClick={() => {
-                            this.editDori(key);
-                          }}
-                          className="iconbtn"
-                          key="edit"
-                        />,
-                        <DeleteOutlined
-                          onClick={() => {
-                            this.deleteDori(key);
-                          }}
-                          className="iconbtn colorred"
-                          key="delete"
-                        />,
-                      ]}
-                    >
-                      <h3>{item.manzil}</h3>
-                      <span>{item.telnomeri}</span>
-                      <h5>{item.email}</h5>
-                    </Card>
-                  </Col>
-                );
-              })
-            : ""}
-          <Col  xs={4} style={{height: '300px'}}>
-            <PlusCircleOutlined style={{color:'grey'}} className='plus' onClick={this.openModal} />
-          </Col>
-        </Row>
+        <Button type="primary" onClick={this.showModal}>
+          Dorilarni kiritish
+        </Button>
+        <Modal
+          visible={visible}
+          title="Dorilarni ma'lumotlarini kiritish"
+          onOk={this.handleOk}
+          centered
+          className="Modal"
+          style={{
+            height: "80vh",
+            overflowY: "auto",
+          }}
+          onCancel={this.handleCancel}
+          footer={[
+            <Button key="back" onClick={this.handleCancel}>
+              Return
+            </Button>,
+            <Button
+              key="submit"
+              type="primary"
+              loading={loading}
+              onClick={this.handleOk}
+            >
+              Submit
+            </Button>,
+          ]}
+        >
+          <Form style={{ backgroundColor: "transparent" }}>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Nomi</Form.Label>
+              <Form.Control type="text" placeholder="Nomini kiriting" />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Ma'lumot</Form.Label>
+              <Form.Control type="text" placeholder="Ma'lumot kiriting" />
+            </Form.Group>
+            <Form.Group controlId="formFile" className="mb-3">
+              <Form.Label>Rasmni kiriting</Form.Label>
+              <br />
+              <Form.Control type="file" placeholder="rasmni kiriting" />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>Tarkibi</Form.Label>
+              <Form.Control as="textarea" rows={3} />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Kasallik</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Kasallik turini kiriting"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Saqlanishi</Form.Label>
+              <Form.Control type="text" placeholder="Saqlanishini kiriting" />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Qo'llanish</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Qo'llanish usulini kiriting"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Narxi</Form.Label>
+              <Form.Control type="text" placeholder="Narxini kiriting" />
+            </Form.Group>
+          </Form>
+        </Modal>
       </div>
     );
   }
