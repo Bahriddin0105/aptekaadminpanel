@@ -87,16 +87,12 @@ export default class Apteka extends Component {
     var nomi = document.getElementById("formBasicNomi").value;
     var narxi = document.getElementById("formBasicNarxi").value;
     var info = document.getElementById("formBasicInfo").value;
-    // var rasm = document.getElementById("formFile").value;
-    // var photo = rasm.split("\\");
-    // var a = photo.length - 1;
-    // console.log(photo[a]);
+    
     var yangi = {
       id: this.state.dorilar.length + 1,
       nomi: nomi,
       info: info,
       narxi: narxi,
-      // rasm: photo[a],
     };
     var dorilar = this.state.dorilar;
 
@@ -188,6 +184,7 @@ export default class Apteka extends Component {
                         width: 300,
                         margin: "auto",
                         marginBottom: "20px",
+                        borderRadius:'10px'
                       }}
                       cover={<img alt="example" src={item.rasm} />}
                       className="cards"
@@ -197,13 +194,15 @@ export default class Apteka extends Component {
                             this.editDori(key);
                           }}
                           className="iconbtn"
+                          style={{borderRadius:'10px'}}
                           key="edit"
                         />,
                         <DeleteOutlined
                           onClick={() => {
                             this.deleteDori(key);
                           }}
-                          className="iconbtn colorred"
+                          className="iconbtn"
+                          style={{borderRadius:'10px'}}
                           key="delete"
                         />,
                       ]}
