@@ -66,6 +66,14 @@ export default class Panel extends Component {
                       Dorilar
                     </Link>
                   </Menu.Item>
+                  <Menu.Item key="2" icon={<EnvironmentOutlined />}>
+                    <Link
+                      style={{ textDecoration: "none" }}
+                      to="/adminpanel/apteka"
+                    >
+                      Aptekalar
+                    </Link>
+                  </Menu.Item>
                 </Menu>
               </Sider>
               <Layout style={{ padding: "24px 24px" }}>
@@ -84,6 +92,9 @@ export default class Panel extends Component {
                     </Route>
                     <Route exact path="/adminpanel/dorilar">
                       <Dorilar />
+                    </Route>
+                    <Route exact path="/adminpanel/apteka">
+                      <Apteka />
                     </Route>
                   </Switch>
                 </Content>
