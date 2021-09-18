@@ -8,9 +8,11 @@ import {
   HomeOutlined,
   PlusOutlined,
   EnvironmentOutlined,
+  MessageOutlined,
 } from "@ant-design/icons";
 import "../App.css";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import Messages from "./Messages";
 const { Header, Content, Sider } = Layout;
 const { Meta } = Card;
 export default class Panel extends Component {
@@ -43,7 +45,7 @@ export default class Panel extends Component {
                 onCollapse={(collapsed, type) => {
                   // console.log(collapsed, type);
                 }}
-                
+                className="sider"
               >
                 <Menu
                   theme="dark"
@@ -75,16 +77,24 @@ export default class Panel extends Component {
                       Aptekalar
                     </Link>
                   </Menu.Item>
+                  <Menu.Item key="4" icon={<MessageOutlined />}>
+                    <Link
+                      style={{ textDecoration: "none" }}
+                      to="/adminpanel/messages"
+                    >
+                      Messages
+                    </Link>
+                  </Menu.Item>
                 </Menu>
               </Sider>
               <Layout>
                 <Content
                   className="site-layout-background"
                   style={{
-                    padding: 24,
+                    padding: 10,
                     margin: 0,
                     minHeight: 280,
-                    overflowY:'scroll'
+                    overflowY: "scroll",
                   }}
                 >
                   <Switch>
@@ -97,6 +107,9 @@ export default class Panel extends Component {
                     </Route>
                     <Route exact path="/adminpanel/apteka">
                       <Apteka />
+                    </Route>
+                    <Route exact path="/adminpanel/messages">
+                      <Messages />
                     </Route>
                   </Switch>
                 </Content>

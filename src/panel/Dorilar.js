@@ -37,7 +37,6 @@ export default class Dorilar extends Component {
           onOk={this.handleOk}
           centered
           className="Modal"
-          
           onCancel={this.handleCancel}
           footer={[
             <Button key="back" onClick={this.handleCancel}>
@@ -53,51 +52,75 @@ export default class Dorilar extends Component {
             </Button>,
           ]}
         >
-          <div style={{height:'400px', overflowY:'auto'}}>
-          <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Nomi</Form.Label>
-              <Form.Control type="text" placeholder="Nomini kiriting" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-              <Form.Label>Ma'lumot</Form.Label>
-              <Form.Control type="text" placeholder="Ma'lumot kiriting" />
-            </Form.Group>
-            <Form.Group controlId="formFile" className="mb-3">
-              <Form.Label>Rasmni kiriting</Form.Label>
-              <br />
-              <Form.Control type="file" placeholder="rasmni kiriting" />
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Tarkibi</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
-              <Form.Label>Kasallik</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Kasallik turini kiriting"
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
-              <Form.Label>Saqlanishi</Form.Label>
-              <Form.Control type="text" placeholder="Saqlanishini kiriting" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
-              <Form.Label>Qo'llanish</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Qo'llanish usulini kiriting"
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput6">
-              <Form.Label>Narxi</Form.Label>
-              <Form.Control type="number" placeholder="Narxini kiriting" />
-            </Form.Group>
-          </Form></div>
+          <div
+            style={{
+              height: "400px",
+              overflowY: "auto",
+            }}
+          >
+            <Form>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput1"
+              >
+                <Form.Label>Nomi</Form.Label>
+                <Form.Control type="text" placeholder="Nomini kiriting" />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput2"
+              >
+                <Form.Label>Ma'lumot</Form.Label>
+                <Form.Control type="text" placeholder="Ma'lumot kiriting" />
+              </Form.Group>
+              <Form.Group controlId="formFile" className="mb-3">
+                <Form.Label>Rasmni kiriting</Form.Label>
+                <br />
+                <Form.Control type="file" placeholder="rasmni kiriting" />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlTextarea1"
+              >
+                <Form.Label>Tarkibi</Form.Label>
+                <Form.Control as="textarea" rows={3} />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput3"
+              >
+                <Form.Label>Kasallik</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Kasallik turini kiriting"
+                />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput4"
+              >
+                <Form.Label>Saqlanishi</Form.Label>
+                <Form.Control type="text" placeholder="Saqlanishini kiriting" />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput5"
+              >
+                <Form.Label>Qo'llanish</Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Qo'llanish usulini kiriting"
+                />
+              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="exampleForm.ControlInput6"
+              >
+                <Form.Label>Narxi</Form.Label>
+                <Form.Control type="number" placeholder="Narxini kiriting" />
+              </Form.Group>
+            </Form>
+          </div>
         </Modal>
       </div>
     );
