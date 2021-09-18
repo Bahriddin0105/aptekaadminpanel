@@ -77,7 +77,7 @@ export default class Panel extends Component {
                   </Menu.Item>
                 </Menu>
               </Sider>
-              <Layout >
+              <Layout style={{border:'3px solid rgb(44, 44, 44)'}}>
                 <Content
                   className="site-layout-background"
                   style={{
