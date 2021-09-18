@@ -37,10 +37,7 @@ export default class Dorilar extends Component {
           onOk={this.handleOk}
           centered
           className="Modal"
-<<<<<<< HEAD
-=======
           
->>>>>>> 3d3b8f3ac6b5b212bc050e4ab268801ff62338f1
           onCancel={this.handleCancel}
           footer={[
             <Button key="back" onClick={this.handleCancel}>
@@ -56,72 +53,6 @@ export default class Dorilar extends Component {
             </Button>,
           ]}
         >
-<<<<<<< HEAD
-          <div style={{ height: "350px", overflowY: "auto" }}>
-            <Form style={{ backgroundColor: "transparent" }}>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput1"
-              >
-                <Form.Label>Nomi</Form.Label>
-                <Form.Control type="text" placeholder="Nomini kiriting" />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput1"
-              >
-                <Form.Label>Ma'lumot</Form.Label>
-                <Form.Control type="text" placeholder="Ma'lumot kiriting" />
-              </Form.Group>
-              <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label>Rasmni kiriting</Form.Label>
-                <br />
-                <Form.Control type="file" placeholder="rasmni kiriting" />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
-                <Form.Label>Tarkibi</Form.Label>
-                <Form.Control as="textarea" rows={3} />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput1"
-              >
-                <Form.Label>Kasallik</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Kasallik turini kiriting"
-                />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput1"
-              >
-                <Form.Label>Saqlanishi</Form.Label>
-                <Form.Control type="text" placeholder="Saqlanishini kiriting" />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput1"
-              >
-                <Form.Label>Qo'llanish</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Qo'llanish usulini kiriting"
-                />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput1"
-              >
-                <Form.Label>Narxi</Form.Label>
-                <Form.Control type="text" placeholder="Narxini kiriting" />
-              </Form.Group>
-            </Form>
-          </div>
-=======
           <div style={{height:'400px', overflowY:'auto'}}>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -167,7 +98,6 @@ export default class Dorilar extends Component {
               <Form.Control type="number" placeholder="Narxini kiriting" />
             </Form.Group>
           </Form></div>
->>>>>>> 3d3b8f3ac6b5b212bc050e4ab268801ff62338f1
         </Modal>
       </div>
     );
