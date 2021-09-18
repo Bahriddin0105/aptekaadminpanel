@@ -59,3 +59,10 @@
   width: 100%;
   font-size: 16px;
 }
+.ant-modal{
+  width: 800px;
+  margin-left: -10%;
+}
+.ant-modal-content{
+  width: 800px;
+}

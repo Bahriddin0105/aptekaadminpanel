@@ -178,7 +178,7 @@ export default class Apteka extends Component {
           {dorilar && Array.isArray(dorilar)
             ? dorilar.map((item, key) => {
                 return (
-                  <Col xs={4}>
+                  <Col xs={12} md={6} sm={3}>
                     <Card
                       style={{
                         width: 300,
@@ -215,7 +215,7 @@ export default class Apteka extends Component {
                 );
               })
             : ""}
-          <Col xs={4} style={{ height: "300px" }}>
+          <Col xs={12} md={6} sm={3} style={{ height: "300px" }}>
             <PlusCircleOutlined
               style={{ color: "grey" }}
               className="plus"
