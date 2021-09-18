@@ -87,16 +87,16 @@ export default class Apteka extends Component {
     var nomi = document.getElementById("formBasicNomi").value;
     var narxi = document.getElementById("formBasicNarxi").value;
     var info = document.getElementById("formBasicInfo").value;
-    var rasm = document.getElementById("formFile").value;
-    var photo = rasm.split("\\");
-    var a = photo.length - 1;
-    console.log(photo[a]);
+    // var rasm = document.getElementById("formFile").value;
+    // var photo = rasm.split("\\");
+    // var a = photo.length - 1;
+    // console.log(photo[a]);
     var yangi = {
       id: this.state.dorilar.length + 1,
       nomi: nomi,
       info: info,
       narxi: narxi,
-      rasm: photo[a],
+      // rasm: photo[a],
     };
     var dorilar = this.state.dorilar;
 

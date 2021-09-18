@@ -43,7 +43,7 @@ export default class Panel extends Component {
                 onCollapse={(collapsed, type) => {
                   console.log(collapsed, type);
                 }}
-                className='sider'
+                
               >
                 <Menu
                   theme="dark"
@@ -77,7 +77,7 @@ export default class Panel extends Component {
                   </Menu.Item>
                 </Menu>
               </Sider>
-              <Layout style={{ padding: "24px 24px" }}>
+              <Layout >
                 <Content
                   className="site-layout-background"
                   style={{
