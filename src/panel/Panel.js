@@ -43,6 +43,7 @@ export default class Panel extends Component {
                 onCollapse={(collapsed, type) => {
                   console.log(collapsed, type);
                 }}
+                className='sider'
               >
                 <Menu
                   theme="dark"
