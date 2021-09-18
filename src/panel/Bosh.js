@@ -37,10 +37,7 @@ export default class Bosh extends Component {
           onOk={this.handleOk}
           centered
           className="Modal"
-          style={{
-            height: "80vh",
-            // overflowY: "auto",
-          }}
+          
           onCancel={this.handleCancel}
           footer={[
             <Button key="back" onClick={this.handleCancel}>
@@ -61,7 +58,7 @@ export default class Bosh extends Component {
               <Form.Label>Nomi</Form.Label>
               <Form.Control type="text" placeholder="Nomini kiriting" />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
               <Form.Label>Ma'lumot</Form.Label>
               <Form.Control type="text" placeholder="Ma'lumot kiriting" />
             </Form.Group>
@@ -77,27 +74,27 @@ export default class Bosh extends Component {
               <Form.Label>Tarkibi</Form.Label>
               <Form.Control as="textarea" rows={3} />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
               <Form.Label>Kasallik</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Kasallik turini kiriting"
               />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
               <Form.Label>Saqlanishi</Form.Label>
               <Form.Control type="text" placeholder="Saqlanishini kiriting" />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
               <Form.Label>Qo'llanish</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Qo'llanish usulini kiriting"
               />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput6">
               <Form.Label>Narxi</Form.Label>
-              <Form.Control type="text" placeholder="Narxini kiriting" />
+              <Form.Control type="number" placeholder="Narxini kiriting" />
             </Form.Group>
           </Form></div>
         </Modal>
