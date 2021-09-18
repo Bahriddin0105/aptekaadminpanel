@@ -37,10 +37,7 @@ export default class Dorilar extends Component {
           onOk={this.handleOk}
           centered
           className="Modal"
-          style={{
-            height: "80vh",
-            overflowY: "auto",
-          }}
+          
           onCancel={this.handleCancel}
           footer={[
             <Button key="back" onClick={this.handleCancel}>
@@ -56,7 +53,8 @@ export default class Dorilar extends Component {
             </Button>,
           ]}
         >
-          <Form style={{ backgroundColor: "transparent" }}>
+          <div style={{height:'400px', overflowY:'auto'}}>
+          <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Nomi</Form.Label>
               <Form.Control type="text" placeholder="Nomini kiriting" />
@@ -99,7 +97,7 @@ export default class Dorilar extends Component {
               <Form.Label>Narxi</Form.Label>
               <Form.Control type="text" placeholder="Narxini kiriting" />
             </Form.Group>
-          </Form>
+          </Form></div>
         </Modal>
       </div>
     );
