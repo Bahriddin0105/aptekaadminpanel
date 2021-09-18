@@ -10,7 +10,7 @@ import {
   EnvironmentOutlined,
 } from "@ant-design/icons";
 import "../App.css";
-import { BrowserRouter, NavLink, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 const { Header, Content, Sider } = Layout;
 const { Meta } = Card;
 export default class Panel extends Component {
@@ -64,7 +64,7 @@ export default class Panel extends Component {
                       style={{ textDecoration: "none" }}
                       to="/adminpanel/dorilar"
                     >
-                      Dorilar
+                      Dorilari
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="3" icon={<EnvironmentOutlined />}>
