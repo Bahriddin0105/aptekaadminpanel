@@ -66,7 +66,7 @@ export default class Panel extends Component {
                       Dorilar
                     </Link>
                   </Menu.Item>
-                  <Menu.Item key="2" icon={<EnvironmentOutlined />}>
+                  <Menu.Item key="3" icon={<EnvironmentOutlined />}>
                     <Link
                       style={{ textDecoration: "none" }}
                       to="/adminpanel/apteka"

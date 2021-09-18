@@ -3,7 +3,7 @@ import { Card } from "antd";
 import { Row, Col, Button, Modal, Form } from "react-bootstrap";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import { PlusCircleOutlined } from "@ant-design/icons";
-export default class Dorilar extends Component {
+export default class Apteka extends Component {
   state = {
     dorilar: [
       {
