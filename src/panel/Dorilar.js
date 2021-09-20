@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Modal, Button, Input } from "antd";
-import { Form } from "react-bootstrap";
-import { VideoCameraAddOutlined } from "@ant-design/icons";
+import { Form, Col, Row } from "react-bootstrap";
+// import { VideoCameraAddOutlined } from "@ant-design/icons";
 import "./Login.css";
 export default class Dorilar extends Component {
   state = {
@@ -55,77 +55,93 @@ export default class Dorilar extends Component {
         >
           <div
             style={{
-              height: "400px",
-              overflowY: "auto",
+              height: "410px",
+              overflowX: "hidden",
             }}
           >
             <Form>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput1"
-              >
-                <Form.Label>Nomi</Form.Label>
-                <Form.Control type="text" placeholder="Nomini kiriting" />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput2"
-              >
-                <Form.Label>Ma'lumot</Form.Label>
-                <Form.Control type="text" placeholder="Ma'lumot kiriting" />
-              </Form.Group>
-              <Form.Group controlId="formFile" className="mb-3">
-                <Form.Label>Rasmni kiriting</Form.Label>
-                <br />
-                <Form.Control type="file" placeholder="rasmni kiriting" />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="exampleForm.ControlInput">
-                <VideoCameraAddOutlined /> <span> </span>{" "}
-                <Form.Label>Video</Form.Label>
-                <Input addonBefore="http://" placeholder="my video" />
-                {/* <Form.Control type="text" placeholder="Video" /> */}
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlTextarea1"
-              >
-                <Form.Label>Tarkibi</Form.Label>
-                <Form.Control as="textarea" rows={3} />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput3"
-              >
-                <Form.Label>Kasallik</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Kasallik turini kiriting"
-                />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput4"
-              >
-                <Form.Label>Saqlanishi</Form.Label>
-                <Form.Control type="text" placeholder="Saqlanishini kiriting" />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput5"
-              >
-                <Form.Label>Qo'llanish</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Qo'llanish usulini kiriting"
-                />
-              </Form.Group>
-              <Form.Group
-                className="mb-3"
-                controlId="exampleForm.ControlInput6"
-              >
-                <Form.Label>Narxi</Form.Label>
-                <Form.Control type="number" placeholder="Narxini kiriting" />
-              </Form.Group>
+              <Row>
+                <Col xs={12} md={6} sm={3}>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput1"
+                  >
+                    <Form.Label className="zoom1">Nomi</Form.Label>
+                    <Form.Control style={{height:'28px'}} type="text" placeholder="Nomini kiriting" />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput2"
+                  >
+                    <Form.Label className="zoom1">Ma'lumot</Form.Label>
+                    <Form.Control style={{height:'28px'}} type="text" placeholder="Ma'lumot kiriting" />
+                  </Form.Group>
+                  <Form.Group controlId="formFile" className="mb-3">
+                    <Form.Label className="zoom1">Rasmni kiriting</Form.Label>
+                    <br />
+                    <Form.Control style={{height:'28px'}} type="file" placeholder="rasmni kiriting" />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput"
+                  >
+                    {/* <VideoCameraAddOutlined /> <span> </span>{" "} */}
+                    <Form.Label className="zoom1">Video</Form.Label>
+                    <Input addonBefore="http://" placeholder="my video" />
+                    {/* <Form.Control style={{height:'28px'}} type="text" placeholder="Video" /> */}
+                  </Form.Group>
+                </Col>
+                <Col xs={12} md={6} sm={3}>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput3"
+                  >
+                    <Form.Label className="zoom1">Kasallik</Form.Label>
+                    <Form.Control style={{height:'28px'}}
+                      type="text"
+                      placeholder="Kasallik turini kiriting"
+                    />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput4"
+                  >
+                    <Form.Label className="zoom1">Saqlanishi</Form.Label>
+                    <Form.Control style={{height:'28px'}}
+                      type="text"
+                      placeholder="Saqlanishini kiriting"
+                    />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput5"
+                  >
+                    <Form.Label className="zoom1">Qo'llanish</Form.Label>
+                    <Form.Control style={{height:'28px'}}
+                      type="text"
+                      placeholder="Qo'llanish usulini kiriting"
+                    />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlInput6"
+                  >
+                    <Form.Label className="zoom1">Narxi</Form.Label>
+                    <Form.Control style={{height:'28px'}}
+                      type="number"
+                      placeholder="Narxini kiriting"
+                    />
+                  </Form.Group>
+                </Col>
+
+                <Form.Group
+                  className="mb-3"
+                  controlId="exampleForm.ControlTextarea1"
+                >
+                  <Form.Label className="zoom1">Tarkibi</Form.Label>
+                  <Form.Control style={{height:'28px'}} as="textarea" />
+                </Form.Group>
+              </Row>
             </Form>
           </div>
         </Modal>

@@ -152,7 +152,7 @@ export default class Bosh extends Component {
                       className="mb-3"
                       controlId="exampleForm.ControlInput7"
                     >
-                      <YoutubeFilled className='icons' style={{color:'red', marginTop:'10px'}} />
+                      <YoutubeFilled className='icons' style={{color:'red'}} />
                       <Form.Label className='zoom' style={{color:'red'}}>You tube</Form.Label>
                       {/* <Form.Control type="text" placeholder="You tube" /> */}
                       <Input

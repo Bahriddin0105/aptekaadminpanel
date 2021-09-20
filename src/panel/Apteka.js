@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Modal, Button, Input, Select, Space, Cascader } from "antd";
+import { Modal, Button, Input, Space } from "antd";
 import { Form, Row, Col } from "react-bootstrap";
-import { VideoCameraAddOutlined, PhoneOutlined } from "@ant-design/icons";
-// import { MdEmail } from "react-icons/md";
+import { PhoneOutlined, EnvironmentOutlined, MailOutlined, InstagramOutlined, SendOutlined, YoutubeFilled, InfoCircleOutlined } from "@ant-design/icons";
 import "./Login.css";
 export default class Apteka extends Component {
   state = {
@@ -62,23 +61,26 @@ export default class Apteka extends Component {
                       className="mb-3"
                       controlId="exampleForm.ControlInput1"
                     >
-                      <Form.Label>Nomi</Form.Label>
-                      <Form.Control type="text" placeholder="Nomini kiriting" />
+                      <Form.Label className='zoom'>Nomi</Form.Label>
+                      <Form.Control style={{height:'40px'}} type="text" placeholder="Nomini kiriting" />
                     </Form.Group>
                     <Form.Group>
-                      <Form.Label>Ma'lumot</Form.Label>
-                      <Form.Control
+                    <InfoCircleOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
+                      <Form.Label className='zoom'>Ma'lumot</Form.Label>
+                      <Form.Control style={{height:'40px'}}
                         type="text"
                         placeholder="Ma'lumot kiriting"
                       />
                     </Form.Group>
 
                     <Form.Group
+                    style={{marginTop:'15px'}}
                       className="mb-3"
                       controlId="exampleForm.ControlInput1"
                     >
-                      <Form.Label>Manzil</Form.Label>
-                      <Form.Control
+                       <EnvironmentOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
+                      <Form.Label className='zoom'>Manzil</Form.Label>
+                      <Form.Control style={{height:'40px'}}
                         type="text"
                         placeholder="Manzilni kiriting"
                       />
@@ -87,78 +89,82 @@ export default class Apteka extends Component {
                       className="mb-3"
                       controlId="exampleForm.ControlInput2"
                     >
-                      <PhoneOutlined /> <span></span>{" "}
-                      <Form.Label>Telefon raqam</Form.Label>
-                      {/* <Form.Control
+                       <PhoneOutlined className='icons' style={{color:'rgb(54, 54, 155)'}}/>
+                      <Form.Label className='zoom'>Telefon raqam</Form.Label>
+                      {/* <Form.Control style={{height:'40px'}}
                       type="tel"
                       placeholder="Telefon raqamni kiriting"
                     /> */}
                       <Input addonBefore="+998" placeholder="my number" />
                     </Form.Group>
                     {/* <Form.Group controlId="formFile" className="mb-3">
-              <Form.Label>Rasmni kiriting</Form.Label>
+              <Form.Label className='zoom'>Rasmni kiriting</Form.Label>
               <br />
-              <Form.Control type="file" placeholder="rasmni kiriting" />
+              <Form.Control style={{height:'40px'}} type="file" placeholder="rasmni kiriting" />
             </Form.Group> */}
+                  </Col>
+                  <Col xs={12} md={6} sm={3}>
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlInput3"
                     >
-                      <Form.Label>Email</Form.Label>
-                      {/* <Form.Control
+                  <MailOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
+                      <Form.Label className='zoom'>Email</Form.Label>
+                      {/* <Form.Control style={{height:'40px'}}
                       type="email"
                       placeholder="Email manzilingizni kiriting"
                     /> */}
                       <Input addonBefore="http://" placeholder="my email" />
-                    </Form.Group>
+                    </Form.Group>{" "}
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlInput4"
                     >
-                      <Form.Label>Instagram manzil</Form.Label>
-                      {/* <Form.Control type="text" placeholder="Instagram manzil" /> */}
+                       <InstagramOutlined className='icons' style={{color:'rgba(212, 36, 154, 0.808)'}} />
+                      <Form.Label className='zoom' style={{color:'rgba(212, 36, 154, 0.808)'}}>Instagram manzil</Form.Label>
+                      {/* <Form.Control style={{height:'40px'}} type="text" placeholder="Instagram manzil" /> */}
                       <Input
                         addonBefore="http://instagram.com/"
                         placeholder="my instagramm"
                       />
                     </Form.Group>
-                  </Col>
-                  <Col xs={12} md={6} sm={3}>
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlInput5"
                     >
-                      <Form.Label>Telegram manzil</Form.Label>
-                      {/* <Form.Control type="text" placeholder="Telegram manzil" /> */}
+                      <SendOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
+                      <Form.Label className='zoom'>Telegram manzil</Form.Label>
+                      {/* <Form.Control style={{height:'40px'}} type="text" placeholder="Telegram manzil" /> */}
                       <Input
                         addonBefore="http://t.me/"
                         placeholder="my telegramm"
                       />
                     </Form.Group>
-                    <Form.Group
+                    {/* <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlInput6"
                     >
-                      <Form.Label>Facebook manzil</Form.Label>
-                      {/* <Form.Control type="text" placeholder="Facebook manzil" /> */}
+                      <Form.Label className='zoom'>Facebook manzil</Form.Label>
+                      
                       <Input
                         addonBefore="http://fb.me"
                         placeholder="my facebook"
                       />
-                    </Form.Group>
+                    </Form.Group> */}
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlInput7"
                     >
-                      <Form.Label>You tube</Form.Label>
-                      {/* <Form.Control type="text" placeholder="You tube" /> */}
+                      <YoutubeFilled className='icons' style={{color:'red'}} />
+                      <Form.Label className='zoom' style={{color:'red'}}>You tube</Form.Label>
+                      {/* <Form.Control style={{height:'40px'}} type="text" placeholder="You tube" /> */}
                       <Input
                         addonBefore="https://youtube.com"
                         placeholder="my you tube"
                       />
                     </Form.Group>
-                    <p>Ishni boshlanish kuni</p>
-                    <select className="select" aria-selected="Dushanba">
+                    {/* <p>Ishni boshlanish kuni</p>
+                    <select className="select">
                       <option value="1">Dushanba</option>
                       <option value="2">Seshanba</option>
                       <option value="3">Chorshanba</option>
@@ -168,14 +174,14 @@ export default class Apteka extends Component {
                     </select>
                     <br />
                     <p>Ishning tugash kuni</p>
-                    <select className="select" aria-selected="Dushanba">
+                    <select className="select">
                       <option value="1">Dushanba</option>
                       <option value="2">Seshanba</option>
                       <option value="3">Chorshanba</option>
                       <option value="4">Payshanba</option>
                       <option value="5">Juma</option>
                       <option value="6">Shanba</option>
-                    </select>
+                    </select> */}
                   </Col>
                 </Row>{" "}
               </Space>
