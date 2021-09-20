@@ -89,7 +89,7 @@ export default class Panel extends Component {
               </Sider>
               <Layout>
                 <Content
-                  className="site-layout-background"
+                  className="site-layout-background stage"
                   style={{
                     padding: 10,
                     margin: 0,
