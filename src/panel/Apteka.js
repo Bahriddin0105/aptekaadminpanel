@@ -52,7 +52,7 @@ export default class Apteka extends Component {
             </Button>,
           ]}
         >
-          <div style={{ height: "400px" }}>
+          <div style={{ height: "350px" }}>
             <Form>
               <Space direction="vertical">
                 <Row>
@@ -62,12 +62,12 @@ export default class Apteka extends Component {
                       controlId="exampleForm.ControlInput1"
                     >
                       <Form.Label className='zoom'>Nomi</Form.Label>
-                      <Form.Control style={{height:'40px'}} type="text" placeholder="Nomini kiriting" />
+                      <Form.Control style={{height:'32px'}} type="text" placeholder="Nomini kiriting" />
                     </Form.Group>
                     <Form.Group>
                     <InfoCircleOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
                       <Form.Label className='zoom'>Ma'lumot</Form.Label>
-                      <Form.Control style={{height:'40px'}}
+                      <Form.Control style={{height:'32px'}}
                         type="text"
                         placeholder="Ma'lumot kiriting"
                       />
@@ -80,7 +80,7 @@ export default class Apteka extends Component {
                     >
                        <EnvironmentOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
                       <Form.Label className='zoom'>Manzil</Form.Label>
-                      <Form.Control style={{height:'40px'}}
+                      <Form.Control style={{height:'32px'}}
                         type="text"
                         placeholder="Manzilni kiriting"
                       />
@@ -91,7 +91,7 @@ export default class Apteka extends Component {
                     >
                        <PhoneOutlined className='icons' style={{color:'rgb(54, 54, 155)'}}/>
                       <Form.Label className='zoom'>Telefon raqam</Form.Label>
-                      {/* <Form.Control style={{height:'40px'}}
+                      {/* <Form.Control style={{height:'32px'}}
                       type="tel"
                       placeholder="Telefon raqamni kiriting"
                     /> */}
@@ -100,7 +100,7 @@ export default class Apteka extends Component {
                     {/* <Form.Group controlId="formFile" className="mb-3">
               <Form.Label className='zoom'>Rasmni kiriting</Form.Label>
               <br />
-              <Form.Control style={{height:'40px'}} type="file" placeholder="rasmni kiriting" />
+              <Form.Control style={{height:'32px'}} type="file" placeholder="rasmni kiriting" />
             </Form.Group> */}
                   </Col>
                   <Col xs={12} md={6} sm={3}>
@@ -110,7 +110,7 @@ export default class Apteka extends Component {
                     >
                   <MailOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
                       <Form.Label className='zoom'>Email</Form.Label>
-                      {/* <Form.Control style={{height:'40px'}}
+                      {/* <Form.Control style={{height:'32px'}}
                       type="email"
                       placeholder="Email manzilingizni kiriting"
                     /> */}
@@ -122,7 +122,7 @@ export default class Apteka extends Component {
                     >
                        <InstagramOutlined className='icons' style={{color:'rgba(212, 36, 154, 0.808)'}} />
                       <Form.Label className='zoom' style={{color:'rgba(212, 36, 154, 0.808)'}}>Instagram manzil</Form.Label>
-                      {/* <Form.Control style={{height:'40px'}} type="text" placeholder="Instagram manzil" /> */}
+                      {/* <Form.Control style={{height:'32px'}} type="text" placeholder="Instagram manzil" /> */}
                       <Input
                         addonBefore="http://instagram.com/"
                         placeholder="my instagramm"
@@ -134,7 +134,7 @@ export default class Apteka extends Component {
                     >
                       <SendOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
                       <Form.Label className='zoom'>Telegram manzil</Form.Label>
-                      {/* <Form.Control style={{height:'40px'}} type="text" placeholder="Telegram manzil" /> */}
+                      {/* <Form.Control style={{height:'32px'}} type="text" placeholder="Telegram manzil" /> */}
                       <Input
                         addonBefore="http://t.me/"
                         placeholder="my telegramm"
@@ -157,7 +157,7 @@ export default class Apteka extends Component {
                     >
                       <YoutubeFilled className='icons' style={{color:'red'}} />
                       <Form.Label className='zoom' style={{color:'red'}}>You tube</Form.Label>
-                      {/* <Form.Control style={{height:'40px'}} type="text" placeholder="You tube" /> */}
+                      {/* <Form.Control style={{height:'32px'}} type="text" placeholder="You tube" /> */}
                       <Input
                         addonBefore="https://youtube.com"
                         placeholder="my you tube"
