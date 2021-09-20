@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Layout, Menu, Card } from "antd";
-import foto from "../doctor logo.png";
+import foto1 from "../doctor logo.png";
 import Bosh from "./Bosh";
 import Apteka from "./Apteka";
 import Dorilar from "./Dorilar.js";
@@ -27,7 +27,7 @@ export default class Panel extends Component {
             >
               <div className="imgh1">
                 <Link to="/adminpanel">
-                  <img src={foto} className="foto" />
+                  <img src={foto1} className="foto" />
                 </Link>
                 <h1 className="text">
                   O'zbekiston Respublikasi Sog'liqni saqlash vazirligi
