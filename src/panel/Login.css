@@ -69,14 +69,15 @@
   background-color: transparent;
 }
 .icons{
+  margin-left: 2px;
   transform: scale(1.2, 1.2);
   margin-right: 10px;
   position: relative;
   top: -4px;
 }
-.ant-input-wrapper, .ant-input{
+/* .ant-input-wrapper, .ant-input{
   height: 40px;
-}
+} */
 .zoom{
   color: rgb(54, 54, 155);
   font-size: 19px;

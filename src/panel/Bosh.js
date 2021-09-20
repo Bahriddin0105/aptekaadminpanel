@@ -70,7 +70,7 @@ export default class Bosh extends Component {
                       className="mb-3"
                       controlId="exampleForm.ControlInput"
                     >
-                      <PlaySquareOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} /> <span> </span>{" "}
+                      <PlaySquareOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
                       <Form.Label className='zoom'>Video</Form.Label>
                       <Input addonBefore="https://" placeholder="my video" />
                       {/* <Form.Control type="text" placeholder="Video" /> */}
