@@ -2,27 +2,11 @@
   position: relative;
   width: 100%;
   height: 657px;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-  /* background-image: url("https://baigenews.kz/upload/iblock/f1e/26e6f2be8341e83646a40ac7baceb4df_crop_l_3_t_36_w_1269_h_714.jpg");
+  background-image: url("https://baigenews.kz/upload/iblock/f1e/26e6f2be8341e83646a40ac7baceb4df_crop_l_3_t_36_w_1269_h_714.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
 }
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 .asosiy {
   position: absolute;
   top: 10%;
@@ -68,28 +52,17 @@
 .ant-modal-content {
   background-color: transparent;
 }
-.icons{
-  transform: scale(1.2, 1.2);
-  margin-right: 10px;
-  position: relative;
-  top: -4px;
-}
-.zoom{
-  color: rgb(54, 54, 155);
-  font-size: 19px;
-  /* margin-top: 20px; */
-  font-family: 'Calibri';
-}
-.select{
+
+.select {
   margin-top: -10px;
   display: block;
   width: 100%;
   font-size: 16px;
 }
-.ant-modal{
+.ant-modal {
   width: 800px;
   margin-left: -10%;
 }
-.ant-modal-content{
+.ant-modal-content {
   width: 800px;
 }
