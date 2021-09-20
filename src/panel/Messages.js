@@ -39,7 +39,7 @@ export default class Messages extends Component {
             </tr>
             <tr>
               <th>#</th>
-              <th>F.I.O qalayyy</th>
+              <th>F.I.O </th>
               <th>Telefon</th>
               <th>Xabar</th>
               <th>Vaqt</th>
