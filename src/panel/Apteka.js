@@ -1,228 +1,187 @@
 import React, { Component } from "react";
-import { Card } from "antd";
-import { Row, Col, Button, Modal, Form } from "react-bootstrap";
-import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
-import { PlusCircleOutlined } from "@ant-design/icons";
+import { Modal, Button, Input, Select, Space, Cascader } from "antd";
+import { Form, Row, Col } from "react-bootstrap";
+import { VideoCameraAddOutlined, PhoneOutlined } from "@ant-design/icons";
+// import { MdEmail } from "react-icons/md";
+import "./Login.css";
 export default class Apteka extends Component {
   state = {
-    dorilar: [
-      {
-        id: 1,
-        nomi: "Analgin",
-        rasm: "https://pharmstd.ru/upload/300spravo4nik_lekarstva/form_181.jpg",
-        info: `Bosh og'rig'iga qarshi dori.`,
-        narxi: "10 000 sum",
-      },
-      {
-        id: 2,
-        nomi: "Analgin",
-        rasm: "https://pharmstd.ru/upload/300spravo4nik_lekarstva/form_181.jpg",
-        info: `Bosh og'rig'iga qarshi dori.`,
-        narxi: "10 000 sum",
-      },
-      {
-        id: 3,
-        nomi: "Analgin",
-        rasm: "https://pharmstd.ru/upload/300spravo4nik_lekarstva/form_181.jpg",
-        info: `Bosh og'rig'iga qarshi dori.`,
-        narxi: "10 000 sum",
-      },
-      {
-        id: 4,
-        nomi: "Analgin",
-        rasm: "https://pharmstd.ru/upload/300spravo4nik_lekarstva/form_181.jpg",
-        info: `Bosh og'rig'iga qarshi dori.`,
-        narxi: "10 000 sum",
-      },
-      {
-        id: 5,
-        nomi: "Analgin",
-        rasm: "https://pharmstd.ru/upload/300spravo4nik_lekarstva/form_181.jpg",
-        info: `Bosh og'rig'iga qarshi dori.`,
-        narxi: "10 000 sum",
-      },
-    ],
-    // dorilar:[],
-    isVisibleModal: false,
-    nomi: null,
-    info: null,
-    narxi: null,
-    edit: null,
-    show: false,
-  };
-  openModal = () => {
-    this.setState({ isVisibleModal: true });
-  };
-  handleClose = () => {
-    document.getElementById("formBasicNomi").value = "";
-    document.getElementById("formBasicNarxi").value = "";
-    document.getElementById("formBasicInfo").value = "";
-    this.setState({ isVisibleModal: false });
+    loading: false,
+    visible: false,
   };
 
-  deleteDori = (id) => {
-    var dorilar = this.state.dorilar;
-    dorilar.splice(id, 1);
-    console.log(id);
+  showModal = () => {
     this.setState({
-      dorilar: dorilar,
+      visible: true,
     });
   };
-  editDori = (id) => {
-    var dorilar = this.state.dorilar;
-    var dorilar = {
-      nomi: this.state.nomi,
-      info: this.state.info,
-      narxi: this.state.narxi,
-    };
 
-    this.setState({
-      yangi: dorilar,
-      edit: id,
-    });
-
-    this.openModal();
-  };
-  saveDori = () => {
-    var nomi = document.getElementById("formBasicNomi").value;
-    var narxi = document.getElementById("formBasicNarxi").value;
-    var info = document.getElementById("formBasicInfo").value;
-    
-    var yangi = {
-      id: this.state.dorilar.length + 1,
-      nomi: nomi,
-      info: info,
-      narxi: narxi,
-    };
-    var dorilar = this.state.dorilar;
-
-    if (this.state.edit == null) {
-      dorilar.push(yangi);
-    } else {
-      dorilar[this.state.edit] = yangi;
-      this.setState({
-        yangi: [],
-        edit: null,
-      });
-    }
-
-    this.setState({
-      dorilar: dorilar,
-    });
-    this.handleClose();
+  handleOk = () => {
+    this.setState({ loading: true });
+    setTimeout(() => {
+      this.setState({ loading: false, visible: false });
+    }, 3000);
   };
 
+  handleCancel = () => {
+    this.setState({ visible: false });
+  };
   render() {
-    const { isVisibleModal, dorilar } = this.state;
-    const { Meta } = Card;
+    const { visible, loading } = this.state;
     return (
       <div>
-        <Row>
-          <br />
-          <br />
-          <br />
-          <br />
-          <Modal
-            show={isVisibleModal}
-            className="xxx"
-            onHide={this.handleClose}
-          >
-            <Modal.Header>
-              <Modal.Title>Farmasevtika</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <Form>
-                <Form.Group className="mb-3" controlId="formBasicNomi">
-                  <Form.Label>Dori nomi</Form.Label>
-                  <Form.Control
-                    type="text"
-                    value={this.state.dorilar["nomi"]}
-                    onChange={(e) => this.setState({ nomi: e.target.value })}
-                    placeholder="Dori nomi"
-                  />
-                </Form.Group>
-                <Form.Group controlId="formFile" className="mb-3">
-                  <Form.Label>Rasmni kiriting</Form.Label>
-                  <br />
-                  <Form.Control type="file" placeholder="rasmni kiriting" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicInfo">
-                  <Form.Label>Dori haqida ma'lumot</Form.Label>
-                  <Form.Control
-                    type="text"
-                    value={this.state.dorilar["info"]}
-                    onChange={(e) => this.setState({ info: e.target.value })}
-                    placeholder="Ma'lumot"
-                  />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicNarxi">
-                  <Form.Label>Narx</Form.Label>
-                  <Form.Control
-                    type="number"
-                    value={this.state.dorilar["narxi"]}
-                    onChange={(e) => this.setState({ narxi: e.target.value })}
-                    placeholder="Narxini tiriting"
-                  />
-                </Form.Group>
-              </Form>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={this.handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={this.saveDori}>
-                Save Changes
-              </Button>
-            </Modal.Footer>
-          </Modal>
-          {dorilar && Array.isArray(dorilar)
-            ? dorilar.map((item, key) => {
-                return (
+        <Button type="primary" onClick={this.showModal}>
+          Apteka ma'lumotlarini
+        </Button>
+        <Modal
+          visible={visible}
+          title="Ma'lumotlarini kiritish"
+          onOk={this.handleOk}
+          centered
+          onCancel={this.handleCancel}
+          footer={[
+            <Button key="back" onClick={this.handleCancel}>
+              Cancel
+            </Button>,
+            <Button
+              key="submit"
+              type="primary"
+              loading={loading}
+              onClick={this.handleOk}
+            >
+              Submit
+            </Button>,
+          ]}
+        >
+          <div style={{ height: "400px" }}>
+            <Form>
+              <Space direction="vertical">
+                <Row>
                   <Col xs={12} md={6} sm={3}>
-                    <Card
-                      style={{
-                        width: 300,
-                        margin: "auto",
-                        marginBottom: "20px",
-                        borderRadius:'10px'
-                      }}
-                      cover={<img alt="example" src={item.rasm} />}
-                      className="cards"
-                      actions={[
-                        <EditOutlined
-                          onClick={() => {
-                            this.editDori(key);
-                          }}
-                          className="iconbtn"
-                          style={{borderRadius:'10px'}}
-                          key="edit"
-                        />,
-                        <DeleteOutlined
-                          onClick={() => {
-                            this.deleteDori(key);
-                          }}
-                          className="iconbtn"
-                          style={{borderRadius:'10px'}}
-                          key="delete"
-                        />,
-                      ]}
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput1"
                     >
-                      <h3>{item.nomi}</h3>
-                      <span>{item.info}</span>
-                      <h5>{item.narxi}</h5>
-                    </Card>
+                      <Form.Label>Nomi</Form.Label>
+                      <Form.Control type="text" placeholder="Nomini kiriting" />
+                    </Form.Group>
+                    <Form.Group>
+                      <Form.Label>Ma'lumot</Form.Label>
+                      <Form.Control
+                        type="text"
+                        placeholder="Ma'lumot kiriting"
+                      />
+                    </Form.Group>
+
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput1"
+                    >
+                      <Form.Label>Manzil</Form.Label>
+                      <Form.Control
+                        type="text"
+                        placeholder="Manzilni kiriting"
+                      />
+                    </Form.Group>
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput2"
+                    >
+                      <PhoneOutlined /> <span></span>{" "}
+                      <Form.Label>Telefon raqam</Form.Label>
+                      {/* <Form.Control
+                      type="tel"
+                      placeholder="Telefon raqamni kiriting"
+                    /> */}
+                      <Input addonBefore="+998" placeholder="my number" />
+                    </Form.Group>
+                    {/* <Form.Group controlId="formFile" className="mb-3">
+              <Form.Label>Rasmni kiriting</Form.Label>
+              <br />
+              <Form.Control type="file" placeholder="rasmni kiriting" />
+            </Form.Group> */}
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput3"
+                    >
+                      <Form.Label>Email</Form.Label>
+                      {/* <Form.Control
+                      type="email"
+                      placeholder="Email manzilingizni kiriting"
+                    /> */}
+                      <Input addonBefore="http://" placeholder="my email" />
+                    </Form.Group>
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput4"
+                    >
+                      <Form.Label>Instagram manzil</Form.Label>
+                      {/* <Form.Control type="text" placeholder="Instagram manzil" /> */}
+                      <Input
+                        addonBefore="http://instagram.com/"
+                        placeholder="my instagramm"
+                      />
+                    </Form.Group>
                   </Col>
-                );
-              })
-            : ""}
-          <Col xs={12} md={6} sm={3} style={{ height: "300px" }}>
-            <PlusCircleOutlined
-              style={{ color: "grey" }}
-              className="plus"
-              onClick={this.openModal}
-            />
-          </Col>
-        </Row>
+                  <Col xs={12} md={6} sm={3}>
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput5"
+                    >
+                      <Form.Label>Telegram manzil</Form.Label>
+                      {/* <Form.Control type="text" placeholder="Telegram manzil" /> */}
+                      <Input
+                        addonBefore="http://t.me/"
+                        placeholder="my telegramm"
+                      />
+                    </Form.Group>
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput6"
+                    >
+                      <Form.Label>Facebook manzil</Form.Label>
+                      {/* <Form.Control type="text" placeholder="Facebook manzil" /> */}
+                      <Input
+                        addonBefore="http://fb.me"
+                        placeholder="my facebook"
+                      />
+                    </Form.Group>
+                    <Form.Group
+                      className="mb-3"
+                      controlId="exampleForm.ControlInput7"
+                    >
+                      <Form.Label>You tube</Form.Label>
+                      {/* <Form.Control type="text" placeholder="You tube" /> */}
+                      <Input
+                        addonBefore="https://youtube.com"
+                        placeholder="my you tube"
+                      />
+                    </Form.Group>
+                    <p>Ishni boshlanish kuni</p>
+                    <select className="select" aria-selected="Dushanba">
+                      <option value="1">Dushanba</option>
+                      <option value="2">Seshanba</option>
+                      <option value="3">Chorshanba</option>
+                      <option value="4">Payshanba</option>
+                      <option value="5">Juma</option>
+                      <option value="6">Shanba</option>
+                    </select>
+                    <br />
+                    <p>Ishning tugash kuni</p>
+                    <select className="select" aria-selected="Dushanba">
+                      <option value="1">Dushanba</option>
+                      <option value="2">Seshanba</option>
+                      <option value="3">Chorshanba</option>
+                      <option value="4">Payshanba</option>
+                      <option value="5">Juma</option>
+                      <option value="6">Shanba</option>
+                    </select>
+                  </Col>
+                </Row>{" "}
+              </Space>
+            </Form>
+          </div>
+        </Modal>
       </div>
     );
   }

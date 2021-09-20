@@ -10,7 +10,7 @@ export default class App extends Component {
           <Route exact path="/">
             <Login />
           </Route>
-          <Route exact path="/adminpanel/bosh">
+          <Route exact path="/adminpanel">
             <Panel />
           </Route>
         </BrowserRouter>

@@ -51,13 +51,10 @@ export default class Panel extends Component {
                   theme="dark"
                   mode="inline"
                   className="menu"
-                  defaultSelectedKeys={["4"]}
+                  defaultSelectedKeys={["1"]}
                 >
                   <Menu.Item key="1" icon={<HomeOutlined />}>
-                    <Link
-                      style={{ textDecoration: "none" }}
-                      to="/adminpanel/bosh"
-                    >
+                    <Link style={{ textDecoration: "none" }} to="/adminpanel">
                       Bosh sahifa
                     </Link>
                   </Menu.Item>
@@ -82,7 +79,7 @@ export default class Panel extends Component {
                       style={{ textDecoration: "none" }}
                       to="/adminpanel/messages"
                     >
-                      Messages
+                      Xabarlar
                     </Link>
                   </Menu.Item>
                 </Menu>
@@ -98,8 +95,8 @@ export default class Panel extends Component {
                   }}
                 >
                   <Switch>
-                    <Route exact path="/adminpanel"></Route>
-                    <Route exact path="/adminpanel/bosh">
+                    {/* <Route exact path="/adminpanel"></Route> */}
+                    <Route exact path="/adminpanel">
                       <Bosh />
                     </Route>
                     <Route exact path="/adminpanel/dorilar">

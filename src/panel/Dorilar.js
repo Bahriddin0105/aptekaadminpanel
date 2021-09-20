@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Modal, Button } from "antd";
+import { Modal, Button, Input } from "antd";
 import { Form } from "react-bootstrap";
+import { VideoCameraAddOutlined } from "@ant-design/icons";
 import "./Login.css";
 export default class Dorilar extends Component {
   state = {
@@ -77,6 +78,12 @@ export default class Dorilar extends Component {
                 <Form.Label>Rasmni kiriting</Form.Label>
                 <br />
                 <Form.Control type="file" placeholder="rasmni kiriting" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="exampleForm.ControlInput">
+                <VideoCameraAddOutlined /> <span> </span>{" "}
+                <Form.Label>Video</Form.Label>
+                <Input addonBefore="http://" placeholder="my video" />
+                {/* <Form.Control type="text" placeholder="Video" /> */}
               </Form.Group>
               <Form.Group
                 className="mb-3"

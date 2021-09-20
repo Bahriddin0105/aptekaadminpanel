@@ -53,16 +53,16 @@
   background-color: transparent;
 }
 
-.select{
+.select {
   margin-top: -10px;
   display: block;
   width: 100%;
   font-size: 16px;
 }
-.ant-modal{
+.ant-modal {
   width: 800px;
   margin-left: -10%;
 }
-.ant-modal-content{
+.ant-modal-content {
   width: 800px;
 }
