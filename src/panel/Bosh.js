@@ -1,8 +1,16 @@
 import React, { Component } from "react";
-import { Modal, Button, Input, Space} from "antd";
+import { Modal, Button, Input, Space } from "antd";
 import { Form, Row, Col } from "react-bootstrap";
-import { VideoCameraAddOutlined, PhoneOutlined } from "@ant-design/icons";
-// import { MdEmail } from "react-icons/md";
+import {
+  PlaySquareOutlined,
+  PhoneOutlined,
+  InstagramOutlined,
+  SendOutlined,
+  FacebookFilled,
+  YoutubeFilled,
+  MailOutlined,
+  EnvironmentOutlined,
+} from "@ant-design/icons";
 import "./Login.css";
 export default class Bosh extends Component {
   state = {
@@ -62,9 +70,9 @@ export default class Bosh extends Component {
                       className="mb-3"
                       controlId="exampleForm.ControlInput"
                     >
-                      <VideoCameraAddOutlined /> <span> </span>{" "}
-                      <Form.Label>Video</Form.Label>
-                      <Input addonBefore="http://" placeholder="my video" />
+                      <PlaySquareOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} /> <span> </span>{" "}
+                      <Form.Label className='zoom'>Video</Form.Label>
+                      <Input addonBefore="https://" placeholder="my video" />
                       {/* <Form.Control type="text" placeholder="Video" /> */}
                     </Form.Group>
 
@@ -72,7 +80,8 @@ export default class Bosh extends Component {
                       className="mb-3"
                       controlId="exampleForm.ControlInput1"
                     >
-                      <Form.Label>Manzil</Form.Label>
+                      <EnvironmentOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
+                      <Form.Label className='zoom'>Manzil</Form.Label>
                       <Form.Control
                         type="text"
                         placeholder="Manzilni kiriting"
@@ -82,38 +91,34 @@ export default class Bosh extends Component {
                       className="mb-3"
                       controlId="exampleForm.ControlInput2"
                     >
-                      <PhoneOutlined /> <span></span>{" "}
-                      <Form.Label>Telefon raqam</Form.Label>
-                      {/* <Form.Control
-                      type="tel"
-                      placeholder="Telefon raqamni kiriting"
-                    /> */}
+                      <PhoneOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} /> <span></span>{" "}
+                      <Form.Label className='zoom'>Telefon raqam</Form.Label>
+                      
                       <Input addonBefore="+998" placeholder="my number" />
                     </Form.Group>
-                    {/* <Form.Group controlId="formFile" className="mb-3">
-              <Form.Label>Rasmni kiriting</Form.Label>
-              <br />
-              <Form.Control type="file" placeholder="rasmni kiriting" />
-            </Form.Group> */}
+                   
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlInput3"
                     >
-                      <Form.Label>Email</Form.Label>
+                      <MailOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
+                      {/* <MdEmail/> */}
+                      <Form.Label className='zoom'>Email</Form.Label>
                       {/* <Form.Control
                       type="email"
                       placeholder="Email manzilingizni kiriting"
                     /> */}
-                      <Input addonBefore="http://" placeholder="my email" />
+                      <Input addonBefore="https://" placeholder="my email" />
                     </Form.Group>
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlInput4"
                     >
-                      <Form.Label>Instagram manzil</Form.Label>
+                      <InstagramOutlined className='icons' style={{color:'rgba(212, 36, 154, 0.808)'}} />{" "}
+                      <Form.Label className='zoom' style={{color:'rgba(212, 36, 154, 0.808)'}}>Instagram manzil</Form.Label>
                       {/* <Form.Control type="text" placeholder="Instagram manzil" /> */}
                       <Input
-                        addonBefore="http://instagram.com/"
+                        addonBefore="https://instagram.com/"
                         placeholder="my instagramm"
                       />
                     </Form.Group>
@@ -123,10 +128,11 @@ export default class Bosh extends Component {
                       className="mb-3"
                       controlId="exampleForm.ControlInput5"
                     >
-                      <Form.Label>Telegram manzil</Form.Label>
+                      <SendOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
+                      <Form.Label className='zoom'>Telegram manzil</Form.Label>
                       {/* <Form.Control type="text" placeholder="Telegram manzil" /> */}
                       <Input
-                        addonBefore="http://t.me/"
+                        addonBefore="https://t.me/"
                         placeholder="my telegramm"
                       />
                     </Form.Group>
@@ -134,10 +140,11 @@ export default class Bosh extends Component {
                       className="mb-3"
                       controlId="exampleForm.ControlInput6"
                     >
-                      <Form.Label>Facebook manzil</Form.Label>
+                      <FacebookFilled className='icons' style={{color:'rgb(54, 54, 155)'}} />
+                      <Form.Label className='zoom'>Facebook manzil</Form.Label>
                       {/* <Form.Control type="text" placeholder="Facebook manzil" /> */}
                       <Input
-                        addonBefore="http://fb.me"
+                        addonBefore="https://fb.me"
                         placeholder="my facebook"
                       />
                     </Form.Group>
@@ -145,7 +152,8 @@ export default class Bosh extends Component {
                       className="mb-3"
                       controlId="exampleForm.ControlInput7"
                     >
-                      <Form.Label>You tube</Form.Label>
+                      <YoutubeFilled className='icons' style={{color:'red', marginTop:'10px'}} />
+                      <Form.Label className='zoom' style={{color:'red'}}>You tube</Form.Label>
                       {/* <Form.Control type="text" placeholder="You tube" /> */}
                       <Input
                         addonBefore="https://youtube.com"
@@ -153,7 +161,7 @@ export default class Bosh extends Component {
                       />
                     </Form.Group>
                     <p>Ishni boshlanish kuni</p>
-                    <select className="select" aria-selected="Dushanba">
+                    <select className="select">
                       <option value="1">Dushanba</option>
                       <option value="2">Seshanba</option>
                       <option value="3">Chorshanba</option>
@@ -163,7 +171,7 @@ export default class Bosh extends Component {
                     </select>
                     <br />
                     <p>Ishning tugash kuni</p>
-                    <select className="select" aria-selected="Dushanba">
+                    <select className="select">
                       <option value="1">Dushanba</option>
                       <option value="2">Seshanba</option>
                       <option value="3">Chorshanba</option>

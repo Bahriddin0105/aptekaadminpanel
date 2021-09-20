@@ -54,7 +54,7 @@ export default class Panel extends Component {
                   defaultSelectedKeys={["1"]}
                 >
                   <Menu.Item key="1" icon={<HomeOutlined />}>
-                    <Link style={{ textDecoration: "none" }} to="/adminpanel">
+                    <Link style={{ textDecoration: "none" }} to="/adminpanel/bosh">
                       Bosh sahifa
                     </Link>
                   </Menu.Item>
@@ -95,8 +95,8 @@ export default class Panel extends Component {
                   }}
                 >
                   <Switch>
-                    {/* <Route exact path="/adminpanel"></Route> */}
-                    <Route exact path="/adminpanel">
+                    <Route exact path="/adminpanel"></Route>
+                    <Route exact path="/adminpanel/bosh">
                       <Bosh />
                     </Route>
                     <Route exact path="/adminpanel/dorilar">
