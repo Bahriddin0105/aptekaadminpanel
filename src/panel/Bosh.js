@@ -119,7 +119,7 @@ export default class Bosh extends Component {
                       {/* <Form.Control type="text" placeholder="Instagram manzil" /> */}
                       <Input
                         addonBefore="https://instagram.com/"
-                        placeholder="my instagramm"
+                        placeholder="my instagram"
                       />
                     </Form.Group>
                   </Col>
@@ -133,7 +133,7 @@ export default class Bosh extends Component {
                       {/* <Form.Control type="text" placeholder="Telegram manzil" /> */}
                       <Input
                         addonBefore="https://t.me/"
-                        placeholder="my telegramm"
+                        placeholder="my telegram"
                       />
                     </Form.Group>
                     <Form.Group
