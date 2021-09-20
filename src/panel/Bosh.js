@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Modal, Button, Input, Space } from "antd";
 import { Form, Row, Col } from "react-bootstrap";
-
 import {
   VideoCameraAddOutlined,
   PhoneOutlined,
@@ -79,6 +78,7 @@ export default class Bosh extends Component {
                       className="mb-3"
                       controlId="exampleForm.ControlInput1"
                     >
+                      {/* <MDBIcon icon="map-marked-alt" /> */}
                       {/* <i class="fa fa-address-book-o"></i> */}
                       {/* <Icon name='address card outline' /> */}
                       <Form.Label>Manzil</Form.Label>
