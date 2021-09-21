@@ -24,10 +24,6 @@
 }
 
 .asosiy {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   position: absolute;
   top: 10%;
   left: 17%;
@@ -38,25 +34,11 @@
   box-shadow: 0px 0px 5px grey;
 }
 
-.birinchi{
-  /* display: inline-block; */
-  width: 450px;
-  padding: 20px;
-  box-sizing: border-box;
-  margin-top: 6%;
-}
-
-
-
 .photo {
-  /* display: inline-block; */
-  width: 100%;
+  width: 105%;
   margin-left: -5%;
   height: 500px;
   border-radius: 0px 20px 20px 0px;
-}.photo{
-  display: inline-block;
-  width: 49%;
 }
 .int {
   outline: none;
@@ -135,7 +117,7 @@
   .zoom{
     font-size: 18px;
   }
-  .second{
+  .fox1{
     display: none;
   }
   .asosiy{
@@ -165,7 +147,7 @@
     font-size: 16px;
 
   }
-  .second{
+  .fox1{
     display: none;
   }
 }
@@ -182,7 +164,7 @@
     font-size: 16px;
 
   }
-  .second{
+  .fox1{
     display: none;
   }
 }
@@ -200,7 +182,7 @@
     font-size: 16px;
 
   }
-  .second{
+  .fox1{
     display: none;
   }
 }
@@ -218,7 +200,7 @@
     font-size: 16px;
 
   }
-  .second{
+  .fox1{
     display: none;
   }
 }
@@ -236,7 +218,7 @@
     font-size: 16px;
 
   }
-  .second{
+  .fox1{
     display: none;
   }
 }
@@ -248,12 +230,12 @@
   .asosiy{
     width: 420px;
     height: 500px;
-    top: 15%;
-    left: 25%;
+    top: 5%;
+    left: 11%;
     font-size: 16px;
 
   }
-  .second{
+  .fox1{
     display: none;
   }
 }
@@ -265,15 +247,14 @@
     }
 
     .asosiy{
-    width: 600px;
+    /* width: 0px; */
     height: 500px;
-    top: 15%;
-    left: 22%;
+    top: 5%;
+    left: 7%;
     font-size: 16px;
 
   }
-  .second{
+  /* .fox1{
     display: none;
-  }
-
+  } */
   }
