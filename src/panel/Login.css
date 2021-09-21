@@ -75,6 +75,7 @@
   position: relative;
   top: -4px;
 }
+
 /* .ant-input-wrapper, .ant-input{
   height: 40px;
 } */
@@ -102,6 +103,11 @@
 .ant-modal-content{
   width: 800px;
 }
+.fade, .alert, .alert-secondary, .show {
+  text-align: center;
+  border-radius: 15px;
+  font-size: 20px;
+}
 @media(max-width: 320px){
   .ant-modal-content{
     width: 300px;
@@ -110,26 +116,49 @@
   .zoom{
     font-size: 18px;
   }
+  /* .fox{
+    display: none;
+  } */
+  .asosiy{
+    width: 260px;
+    height: 500px;
+    top: 5%;
+    left: 11%;
+    font-size: 16px;
+
+  }
+  .alert{
+    height: 100px;
+    width: 100%;
+  }
+  
 }
 @media(min-width:321px) and (max-width: 375px){
   .ant-modal-content{
     width: 350px;
     margin: auto;
   }
-  
+  .fox{
+    display: none;
+  }
 }
 @media(min-width:376px) and (max-width: 425px){
   .ant-modal-content{
     width: 410px;
     margin: auto;
   }
-  
+  .fox{
+    display: none;
+  }
 }
 
 @media(min-width: 426px) and (max-width: 450px){
   .ant-modal-content{
     width: 420px;
     /* margin-left: -120px; */
+  }
+  .fox{
+    display: none;
   }
 }
 
@@ -138,12 +167,18 @@
     width: 450px;
     /* margin-left: -120px; */
   }
+  .fox{
+    display: none;
+  }
 }
 
 @media(min-width: 601px) and (max-width: 768px){
   .ant-modal-content{
     width: 450px;
     margin:auto;
+  }
+  .fox{
+    display: none;
   }
 }
 @media(min-width: 769px) and (max-width: 990px){

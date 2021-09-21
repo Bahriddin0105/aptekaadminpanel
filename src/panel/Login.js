@@ -11,6 +11,8 @@ export default class RouterA extends Component {
           <Row>
             <Col
               xs={6}
+              md={6}
+              sm={6}
               style={{
                 padding: "20px",
                 boxSizing: "borderBox",
@@ -18,15 +20,12 @@ export default class RouterA extends Component {
               }}
             >
               <Container>
-                <Container>
+                
                   {" "}
                   <Alert
                     variant={"secondary"}
-                    style={{
-                      textAlign: "center",
-                      borderRadius: "15px",
-                      fontSize: "20px",
-                    }}
+                    className='alert'
+                    
                   >
                     <img
                       className="logotip"
@@ -92,9 +91,11 @@ export default class RouterA extends Component {
                     <div className="btna">KIRISH</div>
                   </Link>
                 </Container>
-              </Container>
+              
             </Col>
-            <Col xs={6}>
+            <Col xs={6} 
+              md={6}
+              sm={6} className='fox'>
               <img className="photo" src={fox} />
             </Col>
           </Row>
