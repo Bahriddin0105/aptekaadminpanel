@@ -54,7 +54,10 @@ export default class Panel extends Component {
                   defaultSelectedKeys={["1"]}
                 >
                   <Menu.Item key="1" icon={<HomeOutlined />}>
-                    <Link style={{ textDecoration: "none" }} to="/adminpanel/bosh">
+                    <Link
+                      style={{ textDecoration: "none" }}
+                      to="/adminpanel/bosh"
+                    >
                       Bosh sahifa
                     </Link>
                   </Menu.Item>
@@ -86,12 +89,12 @@ export default class Panel extends Component {
               </Sider>
               <Layout>
                 <Content
-                  className="site-layout-background stage"
                   style={{
                     padding: 10,
                     margin: 0,
                     minHeight: 280,
                     overflowY: "scroll",
+                    backgroundColor: "white",
                   }}
                 >
                   <Switch>

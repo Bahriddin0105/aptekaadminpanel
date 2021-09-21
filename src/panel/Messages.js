@@ -32,7 +32,7 @@ export default class Messages extends Component {
         >
           O'qilganlar
         </Button>
-        <Table striped bordered hover variant="dark" id="yangixabarlar">
+        <Table striped bordered hover variant="info" id="yangixabarlar">
           <thead>
             <tr>
               <th colSpan="7">Yangi xabarlar</th>
@@ -62,12 +62,12 @@ export default class Messages extends Component {
                 </Form.Group> */}
               </td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="success" style={{ width: "100%" }}>
                   O'qildi
                 </Button>
               </td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -79,12 +79,12 @@ export default class Messages extends Component {
               <td>@fat</td>
               <td></td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="success" style={{ width: "100%" }}>
                   O'qildi
                 </Button>
               </td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -96,12 +96,12 @@ export default class Messages extends Component {
               <td>@twitter</td>
               <td></td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="success" style={{ width: "100%" }}>
                   O'qildi
                 </Button>
               </td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -113,12 +113,12 @@ export default class Messages extends Component {
               <td>@twitter</td>
               <td></td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="success" style={{ width: "100%" }}>
                   O'qildi
                 </Button>
               </td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -130,12 +130,12 @@ export default class Messages extends Component {
               <td>@twitter</td>
               <td></td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="success" style={{ width: "100%" }}>
                   O'qildi
                 </Button>
               </td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -147,12 +147,12 @@ export default class Messages extends Component {
               <td>@twitter</td>
               <td></td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="success" style={{ width: "100%" }}>
                   O'qildi
                 </Button>
               </td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -164,12 +164,12 @@ export default class Messages extends Component {
               <td>@twitter</td>
               <td></td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="success" style={{ width: "100%" }}>
                   O'qildi
                 </Button>
               </td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -181,12 +181,12 @@ export default class Messages extends Component {
               <td>@twitter</td>
               <td></td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="success" style={{ width: "100%" }}>
                   O'qildi
                 </Button>
               </td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -198,12 +198,12 @@ export default class Messages extends Component {
               <td>@twitter</td>
               <td></td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="success" style={{ width: "100%" }}>
                   O'qildi
                 </Button>
               </td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -215,12 +215,12 @@ export default class Messages extends Component {
               <td>@twitter</td>
               <td></td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="success" style={{ width: "100%" }}>
                   O'qildi
                 </Button>
               </td>
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -231,7 +231,7 @@ export default class Messages extends Component {
           striped
           bordered
           hover
-          variant="dark"
+          variant="info"
           id="oqilganlar"
           style={{ display: "none" }}
         >
@@ -245,8 +245,8 @@ export default class Messages extends Component {
               <th>Telefon</th>
               <th>Xabar</th>
               <th>Vaqt</th>
-
               <th>O'chirish</th>
+              nger{" "}
             </tr>
           </thead>
           <tbody>
@@ -265,7 +265,7 @@ export default class Messages extends Component {
               </td>
 
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -278,7 +278,7 @@ export default class Messages extends Component {
               <td></td>
 
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -291,7 +291,7 @@ export default class Messages extends Component {
               <td></td>
 
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -304,7 +304,7 @@ export default class Messages extends Component {
               <td></td>
 
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -317,7 +317,7 @@ export default class Messages extends Component {
               <td></td>
 
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -330,7 +330,7 @@ export default class Messages extends Component {
               <td></td>
 
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -343,7 +343,7 @@ export default class Messages extends Component {
               <td></td>
 
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -356,7 +356,7 @@ export default class Messages extends Component {
               <td></td>
 
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -369,7 +369,7 @@ export default class Messages extends Component {
               <td></td>
 
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
@@ -382,7 +382,7 @@ export default class Messages extends Component {
               <td></td>
 
               <td>
-                <Button variant="dark" style={{ width: "100%" }}>
+                <Button variant="danger" style={{ width: "100%" }}>
                   O'chirish
                 </Button>
               </td>
