@@ -61,11 +61,11 @@ export default class Bosh extends Component {
             </Button>,
           ]}
         >
-          <div style={{ height: "400px" }}>
+          <div>
             <Form>
               <Space direction="vertical">
                 <Row>
-                  <Col xs={12} md={6} sm={3}>
+                  <Col xs={12} md={6} sm={6}>
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlInput"
@@ -83,6 +83,7 @@ export default class Bosh extends Component {
                       <EnvironmentOutlined className='icons' style={{color:'rgb(54, 54, 155)'}} />
                       <Form.Label className='zoom'>Manzil</Form.Label>
                       <Form.Control
+                      style={{height:'30px', fontSize:'15px'}}
                         type="text"
                         placeholder="Manzilni kiriting"
                       />
@@ -123,7 +124,7 @@ export default class Bosh extends Component {
                       />
                     </Form.Group>
                   </Col>
-                  <Col xs={12} md={6} sm={3}>
+                  <Col xs={12} md={6} sm={6}>
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlInput5"
@@ -160,7 +161,7 @@ export default class Bosh extends Component {
                         placeholder="my you tube"
                       />
                     </Form.Group>
-                    <p>Ishni boshlanish kuni</p>
+                    <p style={{fontSize:'19px', fontFamily:'Calibri'}}>Ishni boshlanish kuni</p>
                     <select className="select">
                       <option value="1">Dushanba</option>
                       <option value="2">Seshanba</option>
@@ -170,7 +171,7 @@ export default class Bosh extends Component {
                       <option value="6">Shanba</option>
                     </select>
                     <br />
-                    <p>Ishning tugash kuni</p>
+                    <p style={{fontSize:'19px', fontFamily:'Calibri'}}>Ishning tugash kuni</p>
                     <select className="select">
                       <option value="1">Dushanba</option>
                       <option value="2">Seshanba</option>
