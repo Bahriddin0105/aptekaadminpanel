@@ -24,6 +24,10 @@
 }
 
 .asosiy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   position: absolute;
   top: 10%;
   left: 17%;
@@ -33,11 +37,26 @@
   border-radius: 20px;
   box-shadow: 0px 0px 5px grey;
 }
+
+.birinchi{
+  /* display: inline-block; */
+  width: 450px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 6%;
+}
+
+
+
 .photo {
-  width: 105%;
+  /* display: inline-block; */
+  width: 100%;
   margin-left: -5%;
   height: 500px;
   border-radius: 0px 20px 20px 0px;
+}.photo{
+  display: inline-block;
+  width: 49%;
 }
 .int {
   outline: none;
@@ -116,9 +135,9 @@
   .zoom{
     font-size: 18px;
   }
-  /* .fox{
+  .second{
     display: none;
-  } */
+  }
   .asosiy{
     width: 260px;
     height: 500px;
@@ -138,7 +157,15 @@
     width: 350px;
     margin: auto;
   }
-  .fox{
+  .asosiy{
+    width: 300px;
+    height: 500px;
+    top: 5%;
+    left: 11%;
+    font-size: 16px;
+
+  }
+  .second{
     display: none;
   }
 }
@@ -147,7 +174,15 @@
     width: 410px;
     margin: auto;
   }
-  .fox{
+  .asosiy{
+    width: 350px;
+    height: 500px;
+    top: 5%;
+    left: 11%;
+    font-size: 16px;
+
+  }
+  .second{
     display: none;
   }
 }
@@ -157,7 +192,15 @@
     width: 420px;
     /* margin-left: -120px; */
   }
-  .fox{
+  .asosiy{
+    width: 400px;
+    height: 500px;
+    top: 5%;
+    left: 11%;
+    font-size: 16px;
+
+  }
+  .second{
     display: none;
   }
 }
@@ -167,7 +210,15 @@
     width: 450px;
     /* margin-left: -120px; */
   }
-  .fox{
+  .asosiy{
+    width: 420px;
+    height: 500px;
+    top: 5%;
+    left: 11%;
+    font-size: 16px;
+
+  }
+  .second{
     display: none;
   }
 }
@@ -177,7 +228,15 @@
     width: 450px;
     margin:auto;
   }
-  .fox{
+  .asosiy{
+    width: 460px;
+    height: 500px;
+    top: 5%;
+    left: 20%;
+    font-size: 16px;
+
+  }
+  .second{
     display: none;
   }
 }
@@ -186,11 +245,35 @@
     /* width: 450px; */
     margin-left: -126px;
   }
+  .asosiy{
+    width: 420px;
+    height: 500px;
+    top: 15%;
+    left: 25%;
+    font-size: 16px;
+
+  }
+  .second{
+    display: none;
+  }
 }
+
 
   @media(min-width:991px) and (max-width: 1024px){
     .ant-modal-content{
       margin-left: -88px;
     }
-    
+
+    .asosiy{
+    width: 600px;
+    height: 500px;
+    top: 15%;
+    left: 22%;
+    font-size: 16px;
+
+  }
+  .second{
+    display: none;
+  }
+
   }
