@@ -61,7 +61,7 @@ export default class Dorilar extends Component {
           >
             <Form>
               <Row>
-                <Col xs={12} md={6} sm={3}>
+                <Col xs={12} md={6} sm={12}>
                   <Form.Group
                     className="mb-3"
                     controlId="exampleForm.ControlInput1"
@@ -94,7 +94,7 @@ export default class Dorilar extends Component {
                     {/* <Form.Control style={{height:'28px' }} type="text" placeholder="Video" /> */}
                   </Form.Group>
                 </Col>
-                <Col xs={12} md={6} sm={3}>
+                <Col xs={12} md={6} sm={12}>
                   <Form.Group
                     className="mb-3"
                     controlId="exampleForm.ControlInput3"

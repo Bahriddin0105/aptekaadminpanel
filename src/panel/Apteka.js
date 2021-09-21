@@ -52,11 +52,11 @@ export default class Apteka extends Component {
             </Button>,
           ]}
         >
-          <div style={{ height: "350px" }}>
+          <div>
             <Form>
               <Space direction="vertical">
                 <Row>
-                  <Col xs={12} md={6} sm={3}>
+                  <Col xs={12} md={6} sm={12}>
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlInput1"
@@ -103,7 +103,7 @@ export default class Apteka extends Component {
               <Form.Control style={{height:'32px'}} type="file" placeholder="rasmni kiriting" />
             </Form.Group> */}
                   </Col>
-                  <Col xs={12} md={6} sm={3}>
+                  <Col xs={12} md={6} sm={12}>
                     <Form.Group
                       className="mb-3"
                       controlId="exampleForm.ControlInput3"
