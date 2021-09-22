@@ -10,7 +10,9 @@ export default class RouterA extends Component {
         <div className="asosiy">
           <Row>
             <Col
-              xs={6}
+              xs={12}
+              md={6}
+              sm={6}
               style={{
                 padding: "20px",
                 boxSizing: "borderBox",
@@ -18,84 +20,78 @@ export default class RouterA extends Component {
               }}
             >
               <Container>
-                <Container>
-                  {" "}
-                  <Alert
-                    variant={"secondary"}
-                    style={{
-                      textAlign: "center",
-                      borderRadius: "15px",
-                      fontSize: "20px",
-                    }}
-                  >
-                    <img
-                      className="logotip"
-                      src="https://www.logopik.com/wp-content/uploads/edd/2018/09/Medical-Logo-Vector-Free-Download.png"
-                    />{" "}
-                    Login va parolni kiriting
-                  </Alert>
-                  <br />
-                  <Form>
-                    <Form.Group className="mb-3" controlId="formBasicLogin">
-                      <Form.Label
-                        style={{
-                          fontFamily: "Century Gothic",
-                          fontSize: "22px",
-                          fontWeight: "600",
-                        }}
-                      >
-                        Login
-                      </Form.Label>
-                      <Form.Control
-                        className="inp"
-                        style={{
-                          backgroundColor: "rgba(128, 128, 128, 0.089)",
-                          color: "black",
-                          fontSize: "18px",
-                          fontWeight: "bolder",
-                          fontFamily: "Century Gothic",
-                          border: "0px solid red",
-                          borderLeft: "5px solid blue",
-                          borderRadius: "0px",
-                        }}
-                        type="word"
-                        placeholder="Enter login"
-                      />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                      <Form.Label
-                        style={{
-                          fontFamily: "Century Gothic",
-                          fontSize: "22px",
-                          fontWeight: "600",
-                        }}
-                      >
-                        Parol
-                      </Form.Label>
-                      <Form.Control
-                        className="inp"
-                        style={{
-                          backgroundColor: "rgba(128, 128, 128, 0.089)",
-                          color: "black",
-                          fontSize: "18px",
-                          fontFamily: "Century Gothic",
-                          border: "0px solid red",
-                          borderLeft: "5px solid blue",
-                          borderRadius: "0px",
-                        }}
-                        type="password"
-                        placeholder="Enter password"
-                      />
-                    </Form.Group>
-                  </Form>
-                  <Link to="/adminpanel">
-                    <div className="btna">KIRISH</div>
-                  </Link>
-                </Container>
+                {" "}
+                <Alert variant={"secondary"} className="alert">
+                  <img
+                    className="logotip"
+                    src="https://www.logopik.com/wp-content/uploads/edd/2018/09/Medical-Logo-Vector-Free-Download.png"
+                  />{" "}
+                  Login va parolni kiriting
+                </Alert>
+                <br />
+                <Form>
+                  <Form.Group className="mb-3" controlId="formBasicLogin">
+                    <Form.Label
+                      style={{
+                        fontFamily: "Century Gothic",
+                        fontSize: "22px",
+                        fontWeight: "600",
+                      }}
+                    >
+                      Login
+                    </Form.Label>
+                    <Form.Control
+                      className="inp"
+                      style={{
+                        backgroundColor: "black",
+                        color: "white",
+                        fontSize: "18px",
+                        fontWeight: "bolder",
+                        fontFamily: "Century Gothic",
+                        border: "0px solid red",
+                        borderLeft: "5px solid yellow",
+                        borderRadius: "0px",
+                      }}
+                      type="word"
+                      placeholder="Enter login"
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label
+                      style={{
+                        fontFamily: "Century Gothic",
+                        fontSize: "22px",
+                        fontWeight: "600",
+                      }}
+                    >
+                      Parol
+                    </Form.Label>
+                    <Form.Control
+                      className="inp"
+                      style={{
+                        backgroundColor: "black",
+                        color: "white",
+                        fontSize: "18px",
+                        fontFamily: "Century Gothic",
+                        border: "0px solid red",
+                        borderLeft: "5px solid yellow",
+                        borderRadius: "0px",
+                      }}
+                      type="password"
+                      placeholder="Enter password"
+                    />
+                  </Form.Group>
+                </Form>
+                <Link to="/adminpanel">
+                  <div className="btna">KIRISH</div>
+                </Link>
               </Container>
             </Col>
+
             <Col xs={6} style={{ width: "50%" }}>
-              <img className="photo" src={fox} />
+              <Col xs={12} md={6} sm={6} className="fox1">
+                <img className="photo" src={fox} />
+              </Col>
             </Col>
           </Row>
         </div>
