@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Table, Button } from "react-bootstrap";
+import "./Login.css";
 // import { Form } from "react-bootstrap";
 export default class Messages extends Component {
   state = {
@@ -32,10 +33,12 @@ export default class Messages extends Component {
         >
           O'qilganlar
         </Button>
-        <Table striped bordered hover variant="info" id="yangixabarlar">
+        <Table striped bordered hover variant="light" id="yangixabarlar">
           <thead>
             <tr>
-              <th colSpan="7">Yangi xabarlar</th>
+              <th colSpan="7" className="yangixabaryozuv">
+                Yangi xabarlar
+              </th>
             </tr>
             <tr>
               <th>#</th>
@@ -231,7 +234,7 @@ export default class Messages extends Component {
           striped
           bordered
           hover
-          variant="info"
+          variant="light"
           id="oqilganlar"
           style={{ display: "none" }}
         >
@@ -246,7 +249,6 @@ export default class Messages extends Component {
               <th>Xabar</th>
               <th>Vaqt</th>
               <th>O'chirish</th>
-              nger{" "}
             </tr>
           </thead>
           <tbody>

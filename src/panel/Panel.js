@@ -98,11 +98,13 @@ export default class Panel extends Component {
                   }}
                 >
                   <Switch>
-                    <Route exact path="/adminpanel"></Route>
+                    <Route exact path="/adminpanel">
+                      <Bosh />
+                    </Route>
                     <Route exact path="/adminpanel/bosh">
                       <Bosh />
                     </Route>
-                    <Route exact path="/adminpanel/dorilar">
+                    <Route exact path="/dorilar">
                       <Dorilar />
                     </Route>
                     <Route exact path="/adminpanel/apteka">

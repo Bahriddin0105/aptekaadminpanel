@@ -94,7 +94,7 @@ export default class RouterA extends Component {
                 </Container>
               </Container>
             </Col>
-            <Col xs={6}>
+            <Col xs={6} style={{ width: "50%" }}>
               <img className="photo" src={fox} />
             </Col>
           </Row>
