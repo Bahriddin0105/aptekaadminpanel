@@ -102,7 +102,6 @@
 .ant-modal-content {
   width: 800px;
 }
-
 @media (max-width: 320px) {
   .fade,
   .alert,
@@ -137,7 +136,7 @@
     width: 260px;
     height: 500px;
     top: 5%;
-    left: 11%;
+    left: 7%;
     font-size: 16px;
   }
   .alert {
@@ -186,7 +185,7 @@
     width: 300px;
     height: 500px;
     top: 5%;
-    left: 11%;
+    left: 8%;
     font-size: 16px;
   }
   .fox1 {
@@ -203,7 +202,7 @@
     width: 350px;
     height: 500px;
     top: 5%;
-    left: 11%;
+    left: 8%;
     font-size: 16px;
   }
   .fox1 {
@@ -252,14 +251,30 @@
   }
   .asosiy {
     width: 460px;
-    height: 500px;
+    height: 400px;
     top: 5%;
     left: 20%;
-    font-size: 16px;
+    font-size: 15px;
   }
-  .fox1 {
-    display: none;
+  .btna{
+    height: 40px;
+    padding: 10px 0px;
   }
+  .photo{
+    height: 400px;
+    
+  }
+  .log{
+    margin-top: -10px;
+  }
+  .alert{
+    margin-top: -18px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  
 }
 @media (min-width: 769px) and (max-width: 800px) {
   .ant-modal-content {

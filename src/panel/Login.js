@@ -28,7 +28,7 @@ export default class RouterA extends Component {
                 </Alert>
                 <br />
                 <Form>
-                  <Form.Group className="mb-3" controlId="formBasicLogin">
+                  <Form.Group className="mb-3 log" controlId="formBasicLogin">
                     <Form.Label
                       style={{
                         fontFamily: "Century Gothic",
@@ -47,14 +47,14 @@ export default class RouterA extends Component {
                         fontWeight: "bolder",
                         fontFamily: "Century Gothic",
                         border: "0px solid red",
-                        borderLeft: "5px solid yellow",
-                        borderRadius: "0px",
+                        borderLeft: "5px solid blue",
+                        borderRadius: '0px 20px 20px 0px',
                       }}
                       type="word"
                       placeholder="Enter login"
                     />
                   </Form.Group>
-                  <Form.Group className="mb-3" controlId="formBasicPassword">
+                  <Form.Group className="mb-3 log" controlId="formBasicPassword">
                     <Form.Label
                       style={{
                         fontFamily: "Century Gothic",
@@ -72,8 +72,8 @@ export default class RouterA extends Component {
                         fontSize: "18px",
                         fontFamily: "Century Gothic",
                         border: "0px solid red",
-                        borderLeft: "5px solid yellow",
-                        borderRadius: "0px",
+                        borderLeft: "5px solid blue",
+                        borderRadius: '0px 20px 20px 0px',
                       }}
                       type="password"
                       placeholder="Enter password"
