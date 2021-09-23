@@ -1,18 +1,16 @@
 import React, { Component } from "react";
-import { Row, Col, Alert, Container, Form, Button } from "react-bootstrap";
+import { Row, Col, Alert, Container, Form} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import fox from "../doctor2.jpg";
 import "./Login.css";
 export default class RouterA extends Component {
   render() {
     return (
-      <div className="bosh">
+      <div className="bosh"> 
         <div className="asosiy">
           <Row>
             <Col
-              xs={12}
-              md={6}
-              sm={6}
+              xs={12} md={6} sm={6}
               style={{
                 padding: "20px",
                 boxSizing: "borderBox",
@@ -88,10 +86,9 @@ export default class RouterA extends Component {
               </Container>
             </Col>
 
-            <Col xs={6} style={{ width: "50%" }}>
+            
               <Col xs={12} md={6} sm={6} className="fox1">
                 <img className="photo" src={fox} />
-              </Col>
             </Col>
           </Row>
         </div>
