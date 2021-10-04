@@ -288,9 +288,7 @@
     left: 11%;
     font-size: 16px;
   }
-  .fox1 {
-    display: none;
-  }
+ 
 }
 @media (min-width: 801px) and (max-width: 990px) {
   .ant-modal-content {
